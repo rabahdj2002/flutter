@@ -870,41 +870,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'بيت',
     },
   },
-  // vfsd
-  {
-    'zkfbsjkr': {
-      'en': 'Account Options',
-      'ar': 'خيارات الحساب',
-    },
-    '6ivdiph3': {
-      'en': 'Randy Peterson',
-      'ar': 'راندي بيترسون',
-    },
-    '8wqhtflh': {
-      'en': 'randy.p@domainname.com',
-      'ar': 'راندي.ب@اسم المجال.كوم',
-    },
-    'ekfw4xli': {
-      'en': 'My Account',
-      'ar': 'حسابي',
-    },
-    'u0hg54cu': {
-      'en': 'Settings',
-      'ar': 'إعدادات',
-    },
-    '49kex0rm': {
-      'en': 'Billing Details',
-      'ar': 'تفاصيل الفاتورة',
-    },
-    'amz8qjw7': {
-      'en': 'Log out',
-      'ar': 'تسجيل الخروج',
-    },
-    '2pjlvcm4': {
-      'en': 'Home',
-      'ar': 'بيت',
-    },
-  },
   // emptyList
   {
     'i44b1lgz': {
@@ -914,28 +879,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4vxq5lua': {
       'en': 'It seems that you don\'t have any recent tasks.',
       'ar': 'يبدو أنه ليس لديك أي مهام حديثة.',
-    },
-  },
-  // assigned
-  {
-    'vlgczgda': {
-      'en': 'Pending Tasks',
-      'ar': 'المهام المعلقة',
-    },
-    'qabk13vg': {
-      'en': 'How many tasks are currently pending completion.',
-      'ar': 'كم عدد المهام التي تنتظر الإكمال حاليًا؟',
-    },
-  },
-  // created
-  {
-    'iecyl8gh': {
-      'en': 'Completed Tasks',
-      'ar': 'المهام المكتملة',
-    },
-    'f0paje44': {
-      'en': 'How many tasks have been successfuly completed.',
-      'ar': 'كم عدد المهام التي تم إكمالها بنجاح؟',
     },
   },
   // Miscellaneous

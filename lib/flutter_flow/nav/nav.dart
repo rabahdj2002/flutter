@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
@@ -11,12 +9,8 @@ import '/auth/base_auth_user_provider.dart';
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -81,19 +75,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? AllTasksWidget() : LoginUserWidget(),
+          appStateNotifier.loggedIn ? const AllTasksWidget() : const LoginUserWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? AllTasksWidget() : LoginUserWidget(),
+              appStateNotifier.loggedIn ? const AllTasksWidget() : const LoginUserWidget(),
         ),
         FFRoute(
           name: 'settings',
           path: '/settings',
           requireAuth: true,
-          builder: (context, params) => SettingsWidget(),
+          builder: (context, params) => const SettingsWidget(),
         ),
         FFRoute(
           name: 'noteDetails',
@@ -113,28 +107,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'createTask',
           path: '/createTask',
           requireAuth: true,
-          builder: (context, params) => CreateTaskWidget(),
+          builder: (context, params) => const CreateTaskWidget(),
         ),
         FFRoute(
           name: 'selectLocation',
           path: '/selectLocation',
           requireAuth: true,
-          builder: (context, params) => SelectLocationWidget(),
+          builder: (context, params) => const SelectLocationWidget(),
         ),
         FFRoute(
           name: 'createAccount',
           path: '/createAccount',
-          builder: (context, params) => CreateAccountWidget(),
+          builder: (context, params) => const CreateAccountWidget(),
         ),
         FFRoute(
           name: 'loginUser',
           path: '/loginUser',
-          builder: (context, params) => LoginUserWidget(),
+          builder: (context, params) => const LoginUserWidget(),
         ),
         FFRoute(
           name: 'userList',
           path: '/userList',
-          builder: (context, params) => UserListWidget(),
+          builder: (context, params) => const UserListWidget(),
         ),
         FFRoute(
           name: 'userData',
@@ -207,18 +201,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'AdminAllTasks',
           path: '/adminAllTasks',
-          builder: (context, params) => AdminAllTasksWidget(),
+          builder: (context, params) => const AdminAllTasksWidget(),
         ),
         FFRoute(
           name: 'ActivationPending',
           path: '/activationPending',
           requireAuth: true,
-          builder: (context, params) => ActivationPendingWidget(),
-        ),
-        FFRoute(
-          name: 'vfsd',
-          path: '/vfsd',
-          builder: (context, params) => VfsdWidget(),
+          builder: (context, params) => const ActivationPendingWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -457,7 +446,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

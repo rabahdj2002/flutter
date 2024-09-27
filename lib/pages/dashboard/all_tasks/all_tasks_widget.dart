@@ -8,22 +8,14 @@ import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/instant_timer.dart';
-import '/walkthroughs/all_tasks.dart';
-import 'dart:math';
 import '/actions/actions.dart' as action_blocks;
 import '/flutter_flow/permissions_util.dart';
-import 'package:tutorial_coach_mark/tutorial_coach_mark.dart'
-    show TutorialCoachMark;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'all_tasks_model.dart';
 export 'all_tasks_model.dart';
 
@@ -31,7 +23,7 @@ class AllTasksWidget extends StatefulWidget {
   const AllTasksWidget({
     super.key,
     int? tabIndex,
-  }) : this.tabIndex = tabIndex ?? 0;
+  }) : tabIndex = tabIndex ?? 0;
 
   final int tabIndex;
 
@@ -55,7 +47,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.instantTimer = InstantTimer.periodic(
-        duration: Duration(milliseconds: 10000),
+        duration: const Duration(milliseconds: 10000),
         callback: (timer) async {
           _model.adminUser = await queryUsersRecordOnce(
             queryBuilder: (usersRecord) => usersRecord.where(
@@ -106,13 +98,6 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
             ));
           } else {
             await action_blocks.accountStatus(context);
-            if (FFAppState().FirstUse) {
-              safeSetState(() =>
-                  _model.allTasksController = createPageWalkthrough(context));
-              _model.allTasksController?.show(context: context);
-              FFAppState().FirstUse = false;
-              safeSetState(() {});
-            }
           }
         },
         startImmediately: true,
@@ -124,7 +109,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
       length: 2,
       initialIndex: min(
           valueOrDefault<int>(
-            widget!.tabIndex,
+            widget.tabIndex,
             0,
           ),
           1),
@@ -145,8 +130,8 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 170.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 170.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -165,8 +150,8 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 170.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 170.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -182,8 +167,6 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return StreamBuilder<List<UsersRecord>>(
       stream: queryUsersRecord(
         queryBuilder: (usersRecord) => usersRecord.where(
@@ -219,7 +202,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
               key: scaffoldKey,
               backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
               floatingActionButton: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: FloatingActionButton.extended(
                   onPressed: () async {
                     await requestPermission(locationPermission);
@@ -229,7 +212,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                     context.pushNamed(
                       'createTask',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.bottomToTop,
                         ),
@@ -267,10 +250,10 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                 ),
                 actions: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 2.0, 12.0, 2.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 2.0, 12.0, 2.0),
                       child: FlutterFlowIconButton(
                         borderColor: Colors.transparent,
                         borderRadius: 19.0,
@@ -286,7 +269,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                           context.pushNamed(
                             'settings',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.leftToRight,
                               ),
@@ -303,16 +286,16 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
               body: Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 1.0,
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Container(
                   height: 200.0,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Column(
                       children: [
                         Align(
-                          alignment: Alignment(0.0, 0),
+                          alignment: const Alignment(0.0, 0),
                           child: TabBar(
                             labelColor:
                                 FlutterFlowTheme.of(context).primaryText,
@@ -324,7 +307,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                   fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
-                            unselectedLabelStyle: TextStyle(),
+                            unselectedLabelStyle: const TextStyle(),
                             indicatorColor:
                                 FlutterFlowTheme.of(context).primary,
                             indicatorWeight: 2.0,
@@ -354,18 +337,18 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                 builder: (context) => Container(
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 12.0, 16.0, 12.0),
                                         child: GridView(
                                           padding: EdgeInsets.zero,
                                           gridDelegate:
-                                              SliverGridDelegateWithFixedCrossAxisCount(
+                                              const SliverGridDelegateWithFixedCrossAxisCount(
                                             crossAxisCount: 2,
                                             crossAxisSpacing: 10.0,
                                             mainAxisSpacing: 10.0,
@@ -388,7 +371,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                     BorderRadius.circular(24.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(12.0),
+                                                padding: const EdgeInsets.all(12.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -405,7 +388,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   12.0,
@@ -491,9 +474,6 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                           ),
                                                     ),
                                                   ],
-                                                ).addWalkthrough(
-                                                  columnEnq1z6uz,
-                                                  _model.allTasksController,
                                                 ),
                                               ),
                                             ),
@@ -510,7 +490,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                     BorderRadius.circular(24.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(12.0),
+                                                padding: const EdgeInsets.all(12.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -527,7 +507,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   12.0,
@@ -622,9 +602,6 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                               ),
                                                     ),
                                                   ],
-                                                ).addWalkthrough(
-                                                  columnGoib90b9,
-                                                  _model.allTasksController,
                                                 ),
                                               ),
                                             ),
@@ -637,7 +614,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 8.0),
                                               child: FlutterFlowChoiceChips(
                                                 options: [
@@ -689,7 +666,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -722,7 +699,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                           extra: <String,
                                                               dynamic>{
                                                             kTransitionInfoKey:
-                                                                TransitionInfo(
+                                                                const TransitionInfo(
                                                               hasTransition:
                                                                   true,
                                                               transitionType:
@@ -756,7 +733,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:
-                                                                  TransitionInfo(
+                                                                  const TransitionInfo(
                                                                 hasTransition:
                                                                     true,
                                                                 transitionType:
@@ -775,7 +752,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                 },
                                                 selectedChipStyle: ChipStyle(
                                                   backgroundColor:
-                                                      Color(0xFF6F61EF),
+                                                      const Color(0xFF6F61EF),
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -793,7 +770,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                   iconSize: 18.0,
                                                   elevation: 2.0,
                                                   borderColor:
-                                                      Color(0x4D9489F5),
+                                                      const Color(0x4D9489F5),
                                                   borderWidth: 1.0,
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -801,7 +778,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                 ),
                                                 unselectedChipStyle: ChipStyle(
                                                   backgroundColor:
-                                                      Color(0xFFE5E7EB),
+                                                      const Color(0xFFE5E7EB),
                                                   textStyle: FlutterFlowTheme
                                                           .of(context)
                                                       .bodyMedium
@@ -809,17 +786,17 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF606A85),
+                                                            const Color(0xFF606A85),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                       ),
-                                                  iconColor: Color(0xFF606A85),
+                                                  iconColor: const Color(0xFF606A85),
                                                   iconSize: 18.0,
                                                   elevation: 0.0,
                                                   borderColor:
-                                                      Color(0xFFF1F4F8),
+                                                      const Color(0xFFF1F4F8),
                                                   borderWidth: 1.0,
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -847,8 +824,8 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                               ),
                                             ),
                                           ]
-                                              .addToStart(SizedBox(width: 16.0))
-                                              .addToEnd(SizedBox(width: 16.0)),
+                                              .addToStart(const SizedBox(width: 16.0))
+                                              .addToEnd(const SizedBox(width: 16.0)),
                                         ),
                                       ),
                                       Expanded(
@@ -888,7 +865,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                 snapshot.data!;
                                             if (listViewNotesRecordList
                                                 .isEmpty) {
-                                              return EmptyListWidget();
+                                              return const EmptyListWidget();
                                             }
 
                                             return ListView.builder(
@@ -903,7 +880,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                     listViewNotesRecordList[
                                                         listViewIndex];
                                                 return Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 0.0, 16.0, 0.0),
                                                   child: InkWell(
@@ -930,7 +907,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                           'note':
                                                               listViewNotesRecord,
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -957,10 +934,10 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 1.0),
+                                            const AlignmentDirectional(0.0, 1.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 5.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -985,12 +962,12 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                       child: GridView(
                                         padding: EdgeInsets.zero,
                                         gridDelegate:
-                                            SliverGridDelegateWithFixedCrossAxisCount(
+                                            const SliverGridDelegateWithFixedCrossAxisCount(
                                           crossAxisCount: 2,
                                           crossAxisSpacing: 10.0,
                                           mainAxisSpacing: 10.0,
@@ -1013,7 +990,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                   BorderRadius.circular(24.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(12.0),
+                                              padding: const EdgeInsets.all(12.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -1028,7 +1005,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 12.0),
                                                     child: StreamBuilder<
@@ -1123,7 +1100,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                   BorderRadius.circular(24.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(12.0),
+                                              padding: const EdgeInsets.all(12.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -1138,7 +1115,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 12.0),
                                                     child: StreamBuilder<
@@ -1237,7 +1214,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 8.0),
                                             child: FlutterFlowChoiceChips(
                                               options: [
@@ -1287,7 +1264,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                       }.withoutNulls,
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1318,7 +1295,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -1351,7 +1328,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                           extra: <String,
                                                               dynamic>{
                                                             kTransitionInfoKey:
-                                                                TransitionInfo(
+                                                                const TransitionInfo(
                                                               hasTransition:
                                                                   true,
                                                               transitionType:
@@ -1370,7 +1347,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                               },
                                               selectedChipStyle: ChipStyle(
                                                 backgroundColor:
-                                                    Color(0xFF6F61EF),
+                                                    const Color(0xFF6F61EF),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -1386,14 +1363,14 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                 iconColor: Colors.white,
                                                 iconSize: 18.0,
                                                 elevation: 2.0,
-                                                borderColor: Color(0x4D9489F5),
+                                                borderColor: const Color(0x4D9489F5),
                                                 borderWidth: 1.0,
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                               ),
                                               unselectedChipStyle: ChipStyle(
                                                 backgroundColor:
-                                                    Color(0xFFE5E7EB),
+                                                    const Color(0xFFE5E7EB),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -1401,16 +1378,16 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
-                                                iconColor: Color(0xFF606A85),
+                                                iconColor: const Color(0xFF606A85),
                                                 iconSize: 18.0,
                                                 elevation: 0.0,
-                                                borderColor: Color(0xFFF1F4F8),
+                                                borderColor: const Color(0xFFF1F4F8),
                                                 borderWidth: 1.0,
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
@@ -1437,8 +1414,8 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                             ),
                                           ),
                                         ]
-                                            .addToStart(SizedBox(width: 16.0))
-                                            .addToEnd(SizedBox(width: 16.0)),
+                                            .addToStart(const SizedBox(width: 16.0))
+                                            .addToEnd(const SizedBox(width: 16.0)),
                                       ),
                                     ),
                                     Expanded(
@@ -1476,7 +1453,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                               listViewNotesRecordList =
                                               snapshot.data!;
                                           if (listViewNotesRecordList.isEmpty) {
-                                            return EmptyListWidget();
+                                            return const EmptyListWidget();
                                           }
 
                                           return ListView.builder(
@@ -1492,7 +1469,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                   listViewNotesRecordList[
                                                       listViewIndex];
                                               return Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 child: InkWell(
@@ -1517,7 +1494,7 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                                         'note':
                                                             listViewNotesRecord,
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1542,9 +1519,9 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 1.0),
+                                      alignment: const AlignmentDirectional(0.0, 1.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -1577,15 +1554,4 @@ class _AllTasksWidgetState extends State<AllTasksWidget>
       },
     );
   }
-
-  TutorialCoachMark createPageWalkthrough(BuildContext context) =>
-      TutorialCoachMark(
-        targets: createWalkthroughTargets(context),
-        onFinish: () async {
-          safeSetState(() => _model.allTasksController = null);
-        },
-        onSkip: () {
-          return true;
-        },
-      );
 }

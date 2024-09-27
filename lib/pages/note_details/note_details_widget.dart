@@ -5,15 +5,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:map_launcher/map_launcher.dart' as $ml;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'note_details_model.dart';
 export 'note_details_model.dart';
 
@@ -50,8 +44,8 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(60.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(60.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -92,23 +86,23 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         floatingActionButton: Visibility(
-          visible: widget!.note!.completed ||
-              (widget!.note?.assignedTo?.id == currentUserReference?.id),
+          visible: widget.note!.completed ||
+              (widget.note?.assignedTo?.id == currentUserReference?.id),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
             child: FloatingActionButton.extended(
               onPressed: () async {
                 context.pushNamed(
                   'addResolution',
                   queryParameters: {
                     'task': serializeParam(
-                      widget!.note,
+                      widget.note,
                       ParamType.Document,
                     ),
                   }.withoutNulls,
                   extra: <String, dynamic>{
-                    'task': widget!.note,
-                    kTransitionInfoKey: TransitionInfo(
+                    'task': widget.note,
+                    kTransitionInfoKey: const TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.bottomToTop,
                     ),
@@ -119,11 +113,11 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
               elevation: 12.0,
               label: Text(
                 () {
-                  if (!widget!.note!.completed &&
-                      (widget!.note?.assignedTo?.id ==
+                  if (!widget.note!.completed &&
+                      (widget.note?.assignedTo?.id ==
                           currentUserReference?.id)) {
                     return 'Resolve Issue';
-                  } else if (widget!.note?.completed == true) {
+                  } else if (widget.note?.completed == true) {
                     return 'View Resolution';
                   } else {
                     return 'No Resolution Found';
@@ -156,11 +150,11 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                       letterSpacing: 0.0,
                     ),
               ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
-            ].divide(SizedBox(height: 4.0)),
+            ].divide(const SizedBox(height: 4.0)),
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
               child: FlutterFlowIconButton(
                 borderColor: FlutterFlowTheme.of(context).alternate,
                 borderRadius: 12.0,
@@ -184,14 +178,14 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
         ),
         body: Container(
           height: MediaQuery.sizeOf(context).height * 1.0,
-          decoration: BoxDecoration(),
+          decoration: const BoxDecoration(),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
@@ -202,14 +196,14 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -217,7 +211,7 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: StreamBuilder<List<UsersRecord>>(
                                       stream: queryUsersRecord(
@@ -225,7 +219,7 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                                             usersRecord.where(
                                           'uid',
                                           isEqualTo:
-                                              widget!.note?.createdBy?.id,
+                                              widget.note?.createdBy?.id,
                                         ),
                                         singleRecord: true,
                                       ),
@@ -271,12 +265,12 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 12.0),
                                     child: Text(
                                       'Due to: ${dateTimeFormat(
                                         "yMMMd",
-                                        widget!.note?.deadline,
+                                        widget.note?.deadline,
                                         locale: FFLocalizations.of(context)
                                             .languageCode,
                                       )}',
@@ -293,9 +287,9 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 20.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -304,7 +298,7 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
                                   await launchMap(
-                                    location: widget!.note?.location,
+                                    location: widget.note?.location,
                                     title: '',
                                   );
                                 },
@@ -325,10 +319,10 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                 Flexible(
                   child: Container(
                     height: MediaQuery.sizeOf(context).height * 1.0,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -338,10 +332,10 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).alternate,
                           ),
-                          if (widget!.note?.video != null &&
-                              widget!.note?.video != '')
+                          if (widget.note?.video != null &&
+                              widget.note?.video != '')
                             FlutterFlowVideoPlayer(
-                              path: widget!.note!.video,
+                              path: widget.note!.video,
                               videoType: VideoType.network,
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 230.0,
@@ -351,16 +345,16 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                               allowFullScreen: true,
                               allowPlaybackSpeedMenu: false,
                             ),
-                          if (widget!.note!.images.length > 0)
+                          if (widget.note!.images.isNotEmpty)
                             Builder(
                               builder: (context) {
-                                final imageCarrousel = widget!.note?.images
-                                        ?.map((e) => e)
+                                final imageCarrousel = widget.note?.images
+                                        .map((e) => e)
                                         .toList()
-                                        ?.toList() ??
+                                        .toList() ??
                                     [];
 
-                                return Container(
+                                return SizedBox(
                                   width: double.infinity,
                                   height: 200.0,
                                   child: CarouselSlider.builder(
@@ -413,11 +407,11 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                             color: FlutterFlowTheme.of(context).alternate,
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 20.0),
                             child: Text(
                               valueOrDefault<String>(
-                                widget!.note?.title,
+                                widget.note?.title,
                                 'Task Title',
                               ).maybeHandleOverflow(
                                 maxChars: 45,
@@ -449,13 +443,13 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                           Expanded(
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 0.0),
                                 child: Text(
                                   valueOrDefault<String>(
-                                    widget!.note?.description,
+                                    widget.note?.description,
                                     'Description',
                                   ),
                                   style: FlutterFlowTheme.of(context)

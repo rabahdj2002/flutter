@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'select_location_model.dart';
 export 'select_location_model.dart';
@@ -51,11 +50,11 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
               Flexible(
                 child: Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: FlutterFlowGoogleMap(
                           controller: _model.googleMapsController,
                           onCameraIdle: (latLng) => safeSetState(
@@ -78,15 +77,15 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: 30.0,
                         height: 30.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0x00FFFFFF),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             Icons.my_location_rounded,
                             color: FlutterFlowTheme.of(context).primary,
@@ -107,16 +106,16 @@ class _SelectLocationWidgetState extends State<SelectLocationWidget> {
                 text: FFLocalizations.of(context).getText(
                   'zlxa5dt6' /* Select Location */,
                 ),
-                icon: Icon(
+                icon: const Icon(
                   Icons.location_on,
                   size: 16.0,
                 ),
                 options: FFButtonOptions(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 44.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primaryText,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Inter Tight',

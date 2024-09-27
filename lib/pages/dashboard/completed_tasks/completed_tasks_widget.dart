@@ -7,15 +7,10 @@ import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'completed_tasks_model.dart';
 export 'completed_tasks_model.dart';
 
@@ -49,7 +44,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
       length: 2,
       initialIndex: min(
           valueOrDefault<int>(
-            widget!.tabIndex,
+            widget.tabIndex,
             0,
           ),
           1),
@@ -70,8 +65,8 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 170.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 170.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -90,8 +85,8 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 170.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 170.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -142,7 +137,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
               key: scaffoldKey,
               backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
               floatingActionButton: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: FloatingActionButton.extended(
                   onPressed: () async {
                     await requestPermission(locationPermission);
@@ -152,7 +147,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                     context.pushNamed(
                       'createTask',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.bottomToTop,
                         ),
@@ -190,10 +185,10 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                 ),
                 actions: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 2.0, 12.0, 2.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 2.0, 12.0, 2.0),
                       child: FlutterFlowIconButton(
                         borderColor: Colors.transparent,
                         borderRadius: 19.0,
@@ -209,7 +204,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                           context.pushNamed(
                             'settings',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.leftToRight,
                               ),
@@ -226,16 +221,16 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
               body: Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 1.0,
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Container(
                   height: 200.0,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Column(
                       children: [
                         Align(
-                          alignment: Alignment(0.0, 0),
+                          alignment: const Alignment(0.0, 0),
                           child: TabBar(
                             labelColor:
                                 FlutterFlowTheme.of(context).primaryText,
@@ -247,7 +242,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                   fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
-                            unselectedLabelStyle: TextStyle(),
+                            unselectedLabelStyle: const TextStyle(),
                             indicatorColor:
                                 FlutterFlowTheme.of(context).primary,
                             indicatorWeight: 2.0,
@@ -277,18 +272,18 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                 builder: (context) => Container(
                                   height:
                                       MediaQuery.sizeOf(context).height * 1.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 12.0, 16.0, 12.0),
                                         child: GridView(
                                           padding: EdgeInsets.zero,
                                           gridDelegate:
-                                              SliverGridDelegateWithFixedCrossAxisCount(
+                                              const SliverGridDelegateWithFixedCrossAxisCount(
                                             crossAxisCount: 2,
                                             crossAxisSpacing: 10.0,
                                             mainAxisSpacing: 10.0,
@@ -311,7 +306,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                     BorderRadius.circular(24.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(12.0),
+                                                padding: const EdgeInsets.all(12.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -328,7 +323,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   12.0,
@@ -430,7 +425,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                     BorderRadius.circular(24.0),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(12.0),
+                                                padding: const EdgeInsets.all(12.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -447,7 +442,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   12.0,
@@ -554,7 +549,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 8.0),
                                               child: FlutterFlowChoiceChips(
                                                 options: [
@@ -602,7 +597,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                       }.withoutNulls,
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -637,7 +632,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                           extra: <String,
                                                               dynamic>{
                                                             kTransitionInfoKey:
-                                                                TransitionInfo(
+                                                                const TransitionInfo(
                                                               hasTransition:
                                                                   true,
                                                               transitionType:
@@ -671,7 +666,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:
-                                                                  TransitionInfo(
+                                                                  const TransitionInfo(
                                                                 hasTransition:
                                                                     true,
                                                                 transitionType:
@@ -690,7 +685,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                 },
                                                 selectedChipStyle: ChipStyle(
                                                   backgroundColor:
-                                                      Color(0xFF6F61EF),
+                                                      const Color(0xFF6F61EF),
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -708,7 +703,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                   iconSize: 18.0,
                                                   elevation: 2.0,
                                                   borderColor:
-                                                      Color(0x4D9489F5),
+                                                      const Color(0x4D9489F5),
                                                   borderWidth: 1.0,
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -716,7 +711,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                 ),
                                                 unselectedChipStyle: ChipStyle(
                                                   backgroundColor:
-                                                      Color(0xFFE5E7EB),
+                                                      const Color(0xFFE5E7EB),
                                                   textStyle: FlutterFlowTheme
                                                           .of(context)
                                                       .bodyMedium
@@ -724,17 +719,17 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            Color(0xFF606A85),
+                                                            const Color(0xFF606A85),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                       ),
-                                                  iconColor: Color(0xFF606A85),
+                                                  iconColor: const Color(0xFF606A85),
                                                   iconSize: 18.0,
                                                   elevation: 0.0,
                                                   borderColor:
-                                                      Color(0xFFF1F4F8),
+                                                      const Color(0xFFF1F4F8),
                                                   borderWidth: 1.0,
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -762,8 +757,8 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                               ),
                                             ),
                                           ]
-                                              .addToStart(SizedBox(width: 16.0))
-                                              .addToEnd(SizedBox(width: 16.0)),
+                                              .addToStart(const SizedBox(width: 16.0))
+                                              .addToEnd(const SizedBox(width: 16.0)),
                                         ),
                                       ),
                                       Expanded(
@@ -807,7 +802,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                 snapshot.data!;
                                             if (listViewNotesRecordList
                                                 .isEmpty) {
-                                              return EmptyListWidget();
+                                              return const EmptyListWidget();
                                             }
 
                                             return ListView.builder(
@@ -822,7 +817,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                     listViewNotesRecordList[
                                                         listViewIndex];
                                                 return Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 0.0, 16.0, 0.0),
                                                   child: InkWell(
@@ -849,7 +844,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                           'note':
                                                               listViewNotesRecord,
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -876,10 +871,10 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 1.0),
+                                            const AlignmentDirectional(0.0, 1.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 5.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -904,12 +899,12 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 12.0, 16.0, 12.0),
                                       child: GridView(
                                         padding: EdgeInsets.zero,
                                         gridDelegate:
-                                            SliverGridDelegateWithFixedCrossAxisCount(
+                                            const SliverGridDelegateWithFixedCrossAxisCount(
                                           crossAxisCount: 2,
                                           crossAxisSpacing: 10.0,
                                           mainAxisSpacing: 10.0,
@@ -932,7 +927,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                   BorderRadius.circular(24.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(12.0),
+                                              padding: const EdgeInsets.all(12.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -947,7 +942,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 12.0),
                                                     child: StreamBuilder<
@@ -1042,7 +1037,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                   BorderRadius.circular(24.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(12.0),
+                                              padding: const EdgeInsets.all(12.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -1057,7 +1052,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 12.0,
                                                                 0.0, 12.0),
                                                     child: StreamBuilder<
@@ -1156,7 +1151,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 8.0),
                                             child: FlutterFlowChoiceChips(
                                               options: [
@@ -1203,7 +1198,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                     }.withoutNulls,
                                                     extra: <String, dynamic>{
                                                       kTransitionInfoKey:
-                                                          TransitionInfo(
+                                                          const TransitionInfo(
                                                         hasTransition: true,
                                                         transitionType:
                                                             PageTransitionType
@@ -1237,7 +1232,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              TransitionInfo(
+                                                              const TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -1270,7 +1265,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                           extra: <String,
                                                               dynamic>{
                                                             kTransitionInfoKey:
-                                                                TransitionInfo(
+                                                                const TransitionInfo(
                                                               hasTransition:
                                                                   true,
                                                               transitionType:
@@ -1289,7 +1284,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                               },
                                               selectedChipStyle: ChipStyle(
                                                 backgroundColor:
-                                                    Color(0xFF6F61EF),
+                                                    const Color(0xFF6F61EF),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -1305,14 +1300,14 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                 iconColor: Colors.white,
                                                 iconSize: 18.0,
                                                 elevation: 2.0,
-                                                borderColor: Color(0x4D9489F5),
+                                                borderColor: const Color(0x4D9489F5),
                                                 borderWidth: 1.0,
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                               ),
                                               unselectedChipStyle: ChipStyle(
                                                 backgroundColor:
-                                                    Color(0xFFE5E7EB),
+                                                    const Color(0xFFE5E7EB),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -1320,16 +1315,16 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF606A85),
+                                                              const Color(0xFF606A85),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
-                                                iconColor: Color(0xFF606A85),
+                                                iconColor: const Color(0xFF606A85),
                                                 iconSize: 18.0,
                                                 elevation: 0.0,
-                                                borderColor: Color(0xFFF1F4F8),
+                                                borderColor: const Color(0xFFF1F4F8),
                                                 borderWidth: 1.0,
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
@@ -1356,8 +1351,8 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                             ),
                                           ),
                                         ]
-                                            .addToStart(SizedBox(width: 16.0))
-                                            .addToEnd(SizedBox(width: 16.0)),
+                                            .addToStart(const SizedBox(width: 16.0))
+                                            .addToEnd(const SizedBox(width: 16.0)),
                                       ),
                                     ),
                                     Expanded(
@@ -1399,7 +1394,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                               listViewNotesRecordList =
                                               snapshot.data!;
                                           if (listViewNotesRecordList.isEmpty) {
-                                            return EmptyListWidget();
+                                            return const EmptyListWidget();
                                           }
 
                                           return ListView.builder(
@@ -1415,7 +1410,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                   listViewNotesRecordList[
                                                       listViewIndex];
                                               return Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 child: InkWell(
@@ -1440,7 +1435,7 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                         'note':
                                                             listViewNotesRecord,
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -1465,9 +1460,9 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 1.0),
+                                      alignment: const AlignmentDirectional(0.0, 1.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 5.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(

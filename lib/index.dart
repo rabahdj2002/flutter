@@ -22,4 +22,3 @@ export '/pages/admin_all_tasks/admin_all_tasks_widget.dart'
     show AdminAllTasksWidget;
 export '/pages/activation_pending/activation_pending_widget.dart'
     show ActivationPendingWidget;
-export '/vfsd/vfsd_widget.dart' show VfsdWidget;

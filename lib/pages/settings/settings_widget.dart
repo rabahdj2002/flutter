@@ -5,13 +5,9 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'settings_model.dart';
 export 'settings_model.dart';
 
@@ -43,8 +39,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(60.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(60.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -82,8 +78,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 20.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 20.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -102,8 +98,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 20.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 20.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -122,8 +118,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 20.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 20.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -141,8 +137,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -154,8 +150,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(115.0, 0.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(115.0, 0.0),
           ),
         ],
       ),
@@ -174,8 +170,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -194,8 +190,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -214,8 +210,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -234,8 +230,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -254,8 +250,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -273,8 +269,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -292,8 +288,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -336,11 +332,11 @@ class _SettingsWidgetState extends State<SettingsWidget>
                       letterSpacing: 0.0,
                     ),
               ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation1']!),
-            ].divide(SizedBox(height: 4.0)),
+            ].divide(const SizedBox(height: 4.0)),
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
               child: FlutterFlowIconButton(
                 borderColor: FlutterFlowTheme.of(context).alternate,
                 borderRadius: 12.0,
@@ -371,21 +367,21 @@ class _SettingsWidgetState extends State<SettingsWidget>
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 8.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 10.0, 0.0),
                                     child: AuthUserStreamWidget(
                                       builder: (context) => ClipRRect(
@@ -402,9 +398,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         4.0, 0.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -415,7 +411,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, -1.0),
+                                              const AlignmentDirectional(0.0, -1.0),
                                           child: AuthUserStreamWidget(
                                             builder: (context) => InkWell(
                                               splashColor: Colors.transparent,
@@ -446,7 +442,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -490,21 +486,21 @@ class _SettingsWidgetState extends State<SettingsWidget>
                           ).animateOnPageLoad(
                               animationsMap['dividerOnPageLoadAnimation']!),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: Container(
                               width: 250.0,
                               height: 50.0,
                               decoration: BoxDecoration(
-                                color: Color(0xFFF1F4F8),
+                                color: const Color(0xFFF1F4F8),
                                 borderRadius: BorderRadius.circular(12.0),
                                 border: Border.all(
-                                  color: Color(0xFFE0E3E7),
+                                  color: const Color(0xFFE0E3E7),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(4.0),
+                                padding: const EdgeInsets.all(4.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -527,16 +523,16 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                 Theme.of(context).brightness ==
                                                         Brightness.light
                                                     ? Colors.white
-                                                    : Color(0xFFF1F4F8),
+                                                    : const Color(0xFFF1F4F8),
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
                                               color: valueOrDefault<Color>(
                                                 Theme.of(context).brightness ==
                                                         Brightness.light
-                                                    ? Color(0xFFE0E3E7)
-                                                    : Color(0xFFF1F4F8),
-                                                Color(0xFFE0E3E7),
+                                                    ? const Color(0xFFE0E3E7)
+                                                    : const Color(0xFFF1F4F8),
+                                                const Color(0xFFE0E3E7),
                                               ),
                                               width: 1.0,
                                             ),
@@ -551,12 +547,12 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                 color: Theme.of(context)
                                                             .brightness ==
                                                         Brightness.light
-                                                    ? Color(0xFF14181B)
-                                                    : Color(0xFF57636C),
+                                                    ? const Color(0xFF14181B)
+                                                    : const Color(0xFF57636C),
                                                 size: 16.0,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         4.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -572,8 +568,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                         color: Theme.of(context)
                                                                     .brightness ==
                                                                 Brightness.light
-                                                            ? Color(0xFF14181B)
-                                                            : Color(0xFF57636C),
+                                                            ? const Color(0xFF14181B)
+                                                            : const Color(0xFF57636C),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -604,16 +600,16 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                 Theme.of(context).brightness ==
                                                         Brightness.dark
                                                     ? Colors.white
-                                                    : Color(0xFFF1F4F8),
+                                                    : const Color(0xFFF1F4F8),
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
                                               color: valueOrDefault<Color>(
                                                 Theme.of(context).brightness ==
                                                         Brightness.dark
-                                                    ? Color(0xFFE0E3E7)
-                                                    : Color(0xFFF1F4F8),
-                                                Color(0xFFF1F4F8),
+                                                    ? const Color(0xFFE0E3E7)
+                                                    : const Color(0xFFF1F4F8),
+                                                const Color(0xFFF1F4F8),
                                               ),
                                               width: 1.0,
                                             ),
@@ -628,12 +624,12 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                 color: Theme.of(context)
                                                             .brightness ==
                                                         Brightness.dark
-                                                    ? Color(0xFF14181B)
-                                                    : Color(0xFF57636C),
+                                                    ? const Color(0xFF14181B)
+                                                    : const Color(0xFF57636C),
                                                 size: 16.0,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         4.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -649,8 +645,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                         color: Theme.of(context)
                                                                     .brightness ==
                                                                 Brightness.dark
-                                                            ? Color(0xFF14181B)
-                                                            : Color(0xFF57636C),
+                                                            ? const Color(0xFF14181B)
+                                                            : const Color(0xFF57636C),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -673,9 +669,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                 'containerOnPageLoadAnimation1']!),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
@@ -690,7 +686,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                     width: 2.0,
                                   ),
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
                                   focusColor: Colors.transparent,
@@ -700,7 +696,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                     context.pushNamed(
                                       'AllTasks',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.rightToLeft,
@@ -714,10 +710,10 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                       Flexible(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 12.0, 8.0, 12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -725,7 +721,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                   CrossAxisAlignment.center,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Icon(
@@ -738,11 +734,11 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -776,9 +772,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                           if (valueOrDefault<bool>(
                               currentUserDocument?.isAdmin, false))
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 0.0),
                                 child: AuthUserStreamWidget(
                                   builder: (context) => Container(
@@ -794,7 +790,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         width: 2.0,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -804,7 +800,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         context.pushNamed(
                                           'AdminAllTasks',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
+                                            kTransitionInfoKey: const TransitionInfo(
                                               hasTransition: true,
                                               transitionType: PageTransitionType
                                                   .rightToLeft,
@@ -817,10 +813,10 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 12.0, 8.0, 12.0),
                                                 child: Row(
@@ -831,7 +827,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -848,11 +844,11 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -892,9 +888,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                           if (valueOrDefault<bool>(
                               currentUserDocument?.isAdmin, false))
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 0.0),
                                 child: AuthUserStreamWidget(
                                   builder: (context) => Container(
@@ -910,7 +906,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         width: 2.0,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -924,7 +920,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                             'userList',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  TransitionInfo(
+                                                  const TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType
@@ -939,10 +935,10 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                         children: [
                                           Flexible(
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 12.0, 8.0, 12.0),
                                                 child: Row(
@@ -953,7 +949,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -970,11 +966,11 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -1012,7 +1008,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                               ),
                             ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 16.0, 0.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
@@ -1027,13 +1023,13 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 8.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           8.0, 0.0, 0.0, 0.0),
                                       child: Icon(
                                         Icons.account_circle_outlined,
@@ -1083,14 +1079,14 @@ class _SettingsWidgetState extends State<SettingsWidget>
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 16.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     GoRouter.of(context).prepareAuthEvent();
@@ -1105,9 +1101,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
                   options: FFButtonOptions(
                     height: 44.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primaryText,
                     textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                           fontFamily: 'Inter',
@@ -1128,9 +1124,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 5.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'o7tpb2u1' /* v0.0.0 Beta */,
@@ -1143,9 +1139,9 @@ class _SettingsWidgetState extends State<SettingsWidget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'oi229fpr' /* Made By: Eng. Bandar Majeed */,

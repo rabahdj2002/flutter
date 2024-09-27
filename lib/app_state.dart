@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '/backend/backend.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:csv/csv.dart';
 import 'package:synchronized/synchronized.dart';
@@ -19,7 +18,7 @@ class FFAppState extends ChangeNotifier {
   }
 
   Future initializePersistedState() async {
-    secureStorage = FlutterSecureStorage();
+    secureStorage = const FlutterSecureStorage();
     await _safeInitAsync(() async {
       _UserLocation =
           latLngFromString(await secureStorage.getString('ff_UserLocation')) ??
@@ -46,7 +45,7 @@ class FFAppState extends ChangeNotifier {
 
   late FlutterSecureStorage secureStorage;
 
-  LatLng? _UserLocation = LatLng(0, 0);
+  LatLng? _UserLocation = const LatLng(0, 0);
   LatLng? get UserLocation => _UserLocation;
   set UserLocation(LatLng? value) {
     _UserLocation = value;
@@ -155,12 +154,12 @@ extension FlutterSecureStorageExtensions on FlutterSecureStorage {
         if (result == null || result.isEmpty) {
           return null;
         }
-        return CsvToListConverter()
+        return const CsvToListConverter()
             .convert(result)
             .first
             .map((e) => e.toString())
             .toList();
       });
   Future<void> setStringList(String key, List<String> value) async =>
-      await writeSync(key: key, value: ListToCsvConverter().convert([value]));
+      await writeSync(key: key, value: const ListToCsvConverter().convert([value]));
 }

@@ -4,13 +4,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'login_user_model.dart';
 export 'login_user_model.dart';
 
@@ -59,8 +55,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -78,8 +74,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -104,8 +100,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -116,8 +112,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -135,8 +131,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -154,8 +150,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -180,8 +176,8 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -219,10 +215,10 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: double.infinity,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 670.0,
               ),
               decoration: BoxDecoration(
@@ -235,14 +231,14 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 32.0, 12.0, 8.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -259,7 +255,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                   animationsMap['textOnPageLoadAnimation1']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 12.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -276,7 +272,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                   animationsMap['textOnPageLoadAnimation2']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.emailTextController,
@@ -341,7 +337,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                   fillColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 16.0, 5.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -357,7 +353,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                   'textFieldOnPageLoadAnimation1']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.passwordTextController,
@@ -423,7 +419,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                   fillColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 16.0, 5.0),
                                   suffixIcon: InkWell(
                                     onTap: () => safeSetState(
@@ -463,7 +459,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                       ? MediaQuery.viewInsetsOf(context).bottom > 0
                       : _isKeyboardVisible))
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -473,7 +469,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                               ? MediaQuery.viewInsetsOf(context).bottom > 0
                               : _isKeyboardVisible))
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 24.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -506,7 +502,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                         ),
                                       }.withoutNulls,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.bottomToTop,
@@ -522,7 +518,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                       'ActivationPending',
                                       context.mounted,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -537,9 +533,9 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                 ),
                                 options: FFButtonOptions(
                                   height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
@@ -554,7 +550,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 4.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -569,7 +565,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                               ? MediaQuery.viewInsetsOf(context).bottom > 0
                               : _isKeyboardVisible))
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 24.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -580,11 +576,11 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                 ),
                                 options: FFButtonOptions(
                                   height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0x00FFFFFF),
+                                  color: const Color(0x00FFFFFF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -596,7 +592,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     width: 0.0,
                                   ),
                                   borderRadius: BorderRadius.circular(50.0),
@@ -608,7 +604,7 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                       ),
                     ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'pfzf16hs' /* Made By: Eng. Bandar Majeed */,
