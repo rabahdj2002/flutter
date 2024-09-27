@@ -231,9 +231,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                   ),
                                                 );
                                               },
-                                              carouselController:
-                                                  _model.carouselController ??=
-                                                      CarouselController(),
+                                              carouselController: _model.carouselController ??= CarouselSliderController(),
                                               options: CarouselOptions(
                                                 initialPage: max(0,
                                                     min(0, images.length - 1)),
@@ -360,10 +358,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               }
                                             }
 
-                                            await _model.carouselController
-                                                ?.nextPage(
-                                              duration:
-                                                  const Duration(milliseconds: 300),
+                                            await _model.carouselController.nextPage(
+                                              duration: const Duration(milliseconds: 300),
                                               curve: Curves.ease,
                                             );
                                           },
