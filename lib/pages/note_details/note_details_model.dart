@@ -3,7 +3,7 @@ import 'note_details_widget.dart' show NoteDetailsWidget;
 import 'package:flutter/material.dart' hide CarouselController;
 
 
-import 'package:carousel_slider/carousel_slider.dart'
+import 'package:carousel_slider/carousel_slider.dart';
 
 
 class NoteDetailsModel extends FlutterFlowModel<NoteDetailsWidget> {

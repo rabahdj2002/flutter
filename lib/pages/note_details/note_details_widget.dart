@@ -13,9 +13,6 @@ import 'note_details_model.dart';
 export 'note_details_model.dart';
 
 
-import 'package:carousel_slider/carousel_slider.dart'
-
-
 
 
 class NoteDetailsWidget extends StatefulWidget {

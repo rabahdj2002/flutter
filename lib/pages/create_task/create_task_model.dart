@@ -5,7 +5,7 @@ import 'create_task_widget.dart' show CreateTaskWidget;
 import 'package:flutter/material.dart' hide CarouselController;
 
 
-import 'package:carousel_slider/carousel_slider.dart'
+import 'package:carousel_slider/carousel_slider.dart';
 
 
 class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {

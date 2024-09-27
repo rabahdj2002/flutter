@@ -25,7 +25,6 @@ import 'create_task_model.dart';
 export 'create_task_model.dart';
 
 
-import 'package:carousel_slider/carousel_slider.dart'
 
 
 class CreateTaskWidget extends StatefulWidget {
