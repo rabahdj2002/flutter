@@ -24,6 +24,10 @@ import 'package:provider/provider.dart';
 import 'create_task_model.dart';
 export 'create_task_model.dart';
 
+
+import 'package:carousel_slider/carousel_slider.dart'
+
+
 class CreateTaskWidget extends StatefulWidget {
   const CreateTaskWidget({super.key});
 
@@ -231,7 +235,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               },
                                               carouselController:
                                                   _model.carouselController ??=
-                                                      CarouselController(),
+                                                      CarouselSliderController(),
                                               options: CarouselOptions(
                                                 initialPage: max(0,
                                                     min(0, images.length - 1)),

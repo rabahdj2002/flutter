@@ -12,6 +12,12 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'note_details_model.dart';
 export 'note_details_model.dart';
 
+
+import 'package:carousel_slider/carousel_slider.dart'
+
+
+
+
 class NoteDetailsWidget extends StatefulWidget {
   const NoteDetailsWidget({
     super.key,
@@ -382,7 +388,7 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                                     },
                                     carouselController:
                                         _model.carouselController ??=
-                                            CarouselController(),
+                                            CarouselSliderController (),
                                     options: CarouselOptions(
                                       initialPage: max(
                                           0, min(0, imageCarrousel.length - 1)),
