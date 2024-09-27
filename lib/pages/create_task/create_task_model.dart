@@ -16,6 +16,7 @@ class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {
   
   // Update to CarouselSliderController
   CarouselSliderController carouselController = CarouselSliderController(); 
+  
   int carouselCurrentIndex = 0;
 
   bool isDataUploading1 = false;
