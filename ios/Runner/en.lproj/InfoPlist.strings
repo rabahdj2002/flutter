@@ -1,3 +1,0 @@
-NSCameraUsageDescription = "We need access to your camera to allow you to take photos and videos directly within the app. This is used to attach images or documents to your notes and tasks.";
-NSPhotoLibraryUsageDescription = "We need permission to access your photo library so you can select and upload existing photos and videos from your device. This helps you attach relevant media to your notes and tasks.";
-NSLocationWhenInUseUsageDescription = "Location permission is required to tag your notes or tasks with your current geolocation. This helps in associating the notes with specific locations, where necessary.";
