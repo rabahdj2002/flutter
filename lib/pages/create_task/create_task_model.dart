@@ -38,7 +38,7 @@ class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {
 
   final formKey = GlobalKey<FormState>();
   // State field(s) for Carousel widget.
-  CarouselController? carouselController;
+  //CarouselController? carouselController;
   int carouselCurrentIndex = 0;
 
   bool isDataUploading1 = false;
