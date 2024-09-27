@@ -8,15 +8,10 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:async';
-import 'dart:math';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'create_account_model.dart';
 export 'create_account_model.dart';
 
@@ -71,8 +66,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -90,8 +85,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -109,8 +104,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -135,8 +130,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -154,8 +149,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -166,8 +161,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -185,8 +180,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -204,8 +199,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -223,8 +218,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -249,8 +244,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -277,10 +272,10 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
               width: double.infinity,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 670.0,
               ),
               decoration: BoxDecoration(
@@ -293,14 +288,14 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 32.0, 12.0, 8.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -317,7 +312,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   animationsMap['textOnPageLoadAnimation1']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 12.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -333,12 +328,11 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation2']!),
                             ),
-                            if (_model.uploadedFileUrl != null &&
-                                _model.uploadedFileUrl != '')
+                            if (_model.uploadedFileUrl != '')
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100.0),
@@ -351,12 +345,11 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   ),
                                 ),
                               ),
-                            if (_model.uploadedFileUrl == null ||
-                                _model.uploadedFileUrl == '')
+                            if (_model.uploadedFileUrl == '')
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -427,7 +420,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                         shape: BoxShape.circle,
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(20.0),
+                                        padding: const EdgeInsets.all(20.0),
                                         child: Icon(
                                           Icons.upload_outlined,
                                           color: FlutterFlowTheme.of(context)
@@ -441,7 +434,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.textController1,
@@ -506,7 +499,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   fillColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 16.0, 5.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -522,7 +515,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   'textFieldOnPageLoadAnimation1']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.emailTextController,
@@ -587,7 +580,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   fillColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 16.0, 5.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -603,7 +596,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   'textFieldOnPageLoadAnimation2']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.passwordTextController,
@@ -669,7 +662,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   fillColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 16.0, 5.0),
                                   suffixIcon: InkWell(
                                     onTap: () => safeSetState(
@@ -701,7 +694,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   'textFieldOnPageLoadAnimation3']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller:
@@ -768,7 +761,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   fillColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 16.0, 5.0),
                                   suffixIcon: InkWell(
                                     onTap: () => safeSetState(
@@ -808,7 +801,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                       ? MediaQuery.viewInsetsOf(context).bottom > 0
                       : _isKeyboardVisible))
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -818,7 +811,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                               ? MediaQuery.viewInsetsOf(context).bottom > 0
                               : _isKeyboardVisible))
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 24.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -827,7 +820,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                       _model
                                           .confirmPasswordTextController.text) {
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
+                                      const SnackBar(
                                         content: Text(
                                           'Passwords don\'t match!',
                                         ),
@@ -882,7 +875,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                     'ActivationPending',
                                     context.mounted,
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 0),
@@ -897,9 +890,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 ),
                                 options: FFButtonOptions(
                                   height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
@@ -914,7 +907,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 4.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -929,7 +922,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                               ? MediaQuery.viewInsetsOf(context).bottom > 0
                               : _isKeyboardVisible))
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 24.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -940,11 +933,11 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 ),
                                 options: FFButtonOptions(
                                   height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0x00FFFFFF),
+                                  color: const Color(0x00FFFFFF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -956,7 +949,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     width: 0.0,
                                   ),
                                   borderRadius: BorderRadius.circular(50.0),
@@ -968,7 +961,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                       ),
                     ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: const AlignmentDirectional(0.0, 1.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'rfa3ksqg' /* Made By: Eng. Bandar Majeed */,

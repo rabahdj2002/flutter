@@ -5,13 +5,10 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/instant_timer.dart';
 import 'dart:async';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'activation_pending_model.dart';
 export 'activation_pending_model.dart';
 
@@ -41,7 +38,7 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.CheckActivation = InstantTimer.periodic(
-        duration: Duration(milliseconds: 1000),
+        duration: const Duration(milliseconds: 1000),
         callback: (timer) async {
           if (valueOrDefault<bool>(currentUserDocument?.status, false) ==
               true) {
@@ -58,7 +55,7 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                 ),
               }.withoutNulls,
               extra: <String, dynamic>{
-                kTransitionInfoKey: TransitionInfo(
+                kTransitionInfoKey: const TransitionInfo(
                   hasTransition: true,
                   transitionType: PageTransitionType.bottomToTop,
                 ),
@@ -87,15 +84,15 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 200.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.5, 1.5),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.5, 1.5),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 200.0.ms,
-            begin: Offset(1.5, 1.5),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.5, 1.5),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -106,8 +103,8 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -132,8 +129,8 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -166,19 +163,19 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
               children: [
                 Expanded(
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
-                      decoration: BoxDecoration(),
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      decoration: const BoxDecoration(),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 10.0),
                             child: Icon(
                               Icons.waving_hand,
@@ -188,7 +185,7 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                                 animationsMap['iconOnPageLoadAnimation']!),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -204,9 +201,9 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 5.0, 20.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -226,7 +223,7 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                               ? MediaQuery.viewInsetsOf(context).bottom > 0
                               : _isKeyboardVisible))
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 24.0, 16.0, 24.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -242,9 +239,9 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                                 ),
                                 options: FFButtonOptions(
                                   height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
@@ -259,7 +256,7 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 4.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -276,7 +273,7 @@ class _ActivationPendingWidgetState extends State<ActivationPendingWidget>
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 1.0),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       '1wv98019' /* Made By: Eng. Bandar Majeed */,

@@ -2,8 +2,6 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'task_component_model.dart';
 export 'task_component_model.dart';
 
@@ -44,12 +42,12 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
@@ -57,17 +55,17 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                 borderRadius: BorderRadius.circular(12.0),
               ),
               child: Padding(
-                padding: EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       () {
-                        if (widget!.note!.deadline!.secondsSinceEpoch <
+                        if (widget.note!.deadline!.secondsSinceEpoch <
                             getCurrentTimestamp.secondsSinceEpoch) {
                           return 'Deadline Overdue';
-                        } else if (widget!.note?.completed == false) {
+                        } else if (widget.note?.completed == false) {
                           return 'Pending Completion';
                         } else {
                           return 'Task Completed';
@@ -75,7 +73,7 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                       }(),
                       style: FlutterFlowTheme.of(context).labelSmall.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF57636C),
+                            color: const Color(0xFF57636C),
                             fontSize: 12.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
@@ -83,10 +81,10 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 0.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
-                          widget!.note?.title,
+                          widget.note?.title,
                           'Task Title',
                         ).maybeHandleOverflow(
                           maxChars: 29,
@@ -104,10 +102,10 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
-                          widget!.note?.description,
+                          widget.note?.description,
                           'This is the podcast description and we go over the proper content that is covered in this podcast.',
                         ).maybeHandleOverflow(
                           maxChars: 110,
@@ -117,7 +115,7 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                         style:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF57636C),
+                                  color: const Color(0xFF57636C),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
@@ -126,7 +124,7 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -138,13 +136,13 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 valueOrDefault<String>(
                                   dateTimeFormat(
                                     "yMMMd",
-                                    widget!.note?.deadline,
+                                    widget.note?.deadline,
                                     locale: FFLocalizations.of(context)
                                         .languageCode,
                                   ),
@@ -154,7 +152,7 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                                     .labelMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF57636C),
+                                      color: const Color(0xFF57636C),
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -163,15 +161,15 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(1.0, 0.0),
+                            alignment: const AlignmentDirectional(1.0, 0.0),
                             child: Container(
                               decoration: BoxDecoration(
                                 color: () {
-                                  if ((widget!.note!.deadline! <
+                                  if ((widget.note!.deadline! <
                                           getCurrentTimestamp) &&
-                                      !widget!.note!.completed) {
+                                      !widget.note!.completed) {
                                     return FlutterFlowTheme.of(context).accent3;
-                                  } else if (!widget!.note!.completed) {
+                                  } else if (!widget.note!.completed) {
                                     return FlutterFlowTheme.of(context).accent1;
                                   } else {
                                     return FlutterFlowTheme.of(context).accent2;
@@ -180,12 +178,12 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                                 border: Border.all(
                                   color: () {
-                                    if ((widget!.note!.deadline! <
+                                    if ((widget.note!.deadline! <
                                             getCurrentTimestamp) &&
-                                        !widget!.note!.completed) {
+                                        !widget.note!.completed) {
                                       return FlutterFlowTheme.of(context)
                                           .accent3;
-                                    } else if (!widget!.note!.completed) {
+                                    } else if (!widget.note!.completed) {
                                       return FlutterFlowTheme.of(context)
                                           .accent1;
                                     } else {
@@ -196,17 +194,17 @@ class _TaskComponentWidgetState extends State<TaskComponentWidget> {
                                 ),
                               ),
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       8.0, 4.0, 8.0, 4.0),
                                   child: Text(
                                     () {
-                                      if ((widget!.note!.deadline! <
+                                      if ((widget.note!.deadline! <
                                               getCurrentTimestamp) &&
-                                          !widget!.note!.completed) {
+                                          !widget.note!.completed) {
                                         return 'Overdue';
-                                      } else if (!widget!.note!.completed) {
+                                      } else if (!widget.note!.completed) {
                                         return 'Pending';
                                       } else {
                                         return 'Completed';

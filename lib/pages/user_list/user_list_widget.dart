@@ -1,4 +1,3 @@
-import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/push_notifications/push_notifications_util.dart';
@@ -6,15 +5,11 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'user_list_model.dart';
@@ -76,8 +71,8 @@ class _UserListWidgetState extends State<UserListWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -95,8 +90,8 @@ class _UserListWidgetState extends State<UserListWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -114,8 +109,8 @@ class _UserListWidgetState extends State<UserListWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -133,8 +128,8 @@ class _UserListWidgetState extends State<UserListWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -152,8 +147,8 @@ class _UserListWidgetState extends State<UserListWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(60.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(60.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -208,13 +203,13 @@ class _UserListWidgetState extends State<UserListWidget>
             floatingActionButton: Visibility(
               visible: false,
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: FloatingActionButton.extended(
                   onPressed: () async {
                     context.pushNamed(
                       'createAccount',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.bottomToTop,
                         ),
@@ -253,10 +248,10 @@ class _UserListWidgetState extends State<UserListWidget>
               ),
               actions: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 2.0, 12.0, 2.0),
+                        const EdgeInsetsDirectional.fromSTEB(12.0, 2.0, 12.0, 2.0),
                     child: FlutterFlowIconButton(
                       borderColor: Colors.transparent,
                       borderRadius: 19.0,
@@ -272,7 +267,7 @@ class _UserListWidgetState extends State<UserListWidget>
                         context.pushNamed(
                           'settings',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
+                            kTransitionInfoKey: const TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.leftToRight,
                             ),
@@ -294,20 +289,20 @@ class _UserListWidgetState extends State<UserListWidget>
                 children: [
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         width: double.infinity,
                         height: MediaQuery.sizeOf(context).height * 1.0,
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           maxWidth: 970.0,
                         ),
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -323,14 +318,14 @@ class _UserListWidgetState extends State<UserListWidget>
                                   animationsMap['textOnPageLoadAnimation']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 8.0, 16.0, 0.0),
                               child: TextFormField(
                                 controller: _model.textController,
                                 focusNode: _model.textFieldFocusNode,
                                 onChanged: (_) => EasyDebounce.debounce(
                                   '_model.textController',
-                                  Duration(milliseconds: 2000),
+                                  const Duration(milliseconds: 2000),
                                   () async {
                                     safeSetState(() {
                                       _model.simpleSearchResults = TextSearch(
@@ -339,8 +334,8 @@ class _UserListWidgetState extends State<UserListWidget>
                                               (record) =>
                                                   TextSearchItem.fromTerms(
                                                       record, [
-                                                record.email!,
-                                                record.displayName!
+                                                record.email,
+                                                record.displayName
                                               ]),
                                             )
                                             .toList(),
@@ -348,7 +343,6 @@ class _UserListWidgetState extends State<UserListWidget>
                                           .search(_model.textController.text)
                                           .map((r) => r.object)
                                           .toList();
-                                      ;
                                     });
                                   },
                                 ),
@@ -403,7 +397,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 0.0, 0.0, 0.0),
                                   suffixIcon: Icon(
                                     Icons.search_rounded,
@@ -425,7 +419,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                   'textFieldOnPageLoadAnimation']!),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 15.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
@@ -435,7 +429,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -443,10 +437,10 @@ class _UserListWidgetState extends State<UserListWidget>
                                       flex: 4,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -471,7 +465,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(1.0, 0.0),
+                                                const AlignmentDirectional(1.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
@@ -498,8 +492,7 @@ class _UserListWidgetState extends State<UserListWidget>
                               child: Builder(
                                 builder: (context) {
                                   final usersList =
-                                      _model.textController.text != null &&
-                                              _model.textController.text != ''
+                                      _model.textController.text != ''
                                           ? _model.simpleSearchResults
                                           : userListUsersRecordList
                                               .map((e) => e)
@@ -507,12 +500,12 @@ class _UserListWidgetState extends State<UserListWidget>
 
                                   return ListView.separated(
                                     padding:
-                                        EdgeInsets.symmetric(vertical: 1.0),
+                                        const EdgeInsets.symmetric(vertical: 1.0),
                                     shrinkWrap: true,
                                     scrollDirection: Axis.vertical,
                                     itemCount: usersList.length,
                                     separatorBuilder: (_, __) =>
-                                        SizedBox(height: 1.0),
+                                        const SizedBox(height: 1.0),
                                     itemBuilder: (context, usersListIndex) {
                                       final usersListItem =
                                           usersList[usersListIndex];
@@ -527,7 +520,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .alternate,
-                                              offset: Offset(
+                                              offset: const Offset(
                                                 0.0,
                                                 1.0,
                                               ),
@@ -536,13 +529,13 @@ class _UserListWidgetState extends State<UserListWidget>
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 12.0, 16.0, 12.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 0.0, 0.0, 0.0),
                                                 child: Container(
@@ -565,7 +558,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(2.0),
+                                                        const EdgeInsets.all(2.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -583,7 +576,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                               Expanded(
                                                 flex: 4,
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -612,7 +605,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -635,7 +628,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 4.0)),
+                                                        const SizedBox(height: 4.0)),
                                                   ),
                                                 ),
                                               ),
@@ -647,7 +640,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                   flex: 2,
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 12.0, 0.0),
                                                     child: Text(
@@ -675,7 +668,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                   flex: 3,
                                                   child: Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Text(
                                                       FFLocalizations.of(
@@ -785,11 +778,11 @@ class _UserListWidgetState extends State<UserListWidget>
                                                         ),
                                                         child: Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         4.0,
@@ -817,11 +810,11 @@ class _UserListWidgetState extends State<UserListWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -846,17 +839,17 @@ class _UserListWidgetState extends State<UserListWidget>
                                                                           (alertDialogContext) {
                                                                         return AlertDialog(
                                                                           title:
-                                                                              Text('Warning!'),
+                                                                              const Text('Warning!'),
                                                                           content:
-                                                                              Text('Are you sure you want to delete this user'),
+                                                                              const Text('Are you sure you want to delete this user'),
                                                                           actions: [
                                                                             TextButton(
                                                                               onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                              child: Text('Cancel'),
+                                                                              child: const Text('Cancel'),
                                                                             ),
                                                                             TextButton(
                                                                               onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                              child: Text('Confirm'),
+                                                                              child: const Text('Confirm'),
                                                                             ),
                                                                           ],
                                                                         );

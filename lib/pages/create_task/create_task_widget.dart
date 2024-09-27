@@ -11,11 +11,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:async';
-import 'dart:math';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -23,7 +20,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_task_model.dart';
 export 'create_task_model.dart';
@@ -54,7 +50,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       currentUserLocationValue =
-          await getCurrentUserLocation(defaultLocation: LatLng(0.0, 0.0));
+          await getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0));
       FFAppState().UserLocation = currentUserLocationValue;
       FFAppState().update(() {});
     });
@@ -82,8 +78,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(60.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(60.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -144,11 +140,11 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                       letterSpacing: 0.0,
                     ),
               ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
-            ].divide(SizedBox(height: 4.0)),
+            ].divide(const SizedBox(height: 4.0)),
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
               child: FlutterFlowIconButton(
                 borderColor: FlutterFlowTheme.of(context).alternate,
                 borderRadius: 12.0,
@@ -185,22 +181,22 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Container(
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 770.0,
                             ),
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 16.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  if (_model.uploadedFileUrls1.length > 0)
+                                  if (_model.uploadedFileUrls1.isNotEmpty)
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: Builder(
                                         builder: (context) {
@@ -209,7 +205,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               .map((e) => e)
                                               .toList();
 
-                                          return Container(
+                                          return SizedBox(
                                             width: double.infinity,
                                             height: 200.0,
                                             child: CarouselSlider.builder(
@@ -256,9 +252,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         },
                                       ),
                                     ),
-                                  if (_model.uploadedFileUrls1.length <= 0)
+                                  if (_model.uploadedFileUrls1.isEmpty)
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 15.0, 25.0, 0.0),
                                       child: Container(
                                         width:
@@ -365,7 +361,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             await _model.carouselController
                                                 ?.nextPage(
                                               duration:
-                                                  Duration(milliseconds: 300),
+                                                  const Duration(milliseconds: 300),
                                               curve: Curves.ease,
                                             );
                                           },
@@ -382,7 +378,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                 size: 35.0,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
@@ -406,7 +402,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       ),
                                     ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -481,11 +477,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           }
                                         }
                                       },
-                                      text: _model.uploadedFileUrl2 != null &&
-                                              _model.uploadedFileUrl2 != ''
+                                      text: _model.uploadedFileUrl2 != ''
                                           ? 'Video Selected'
                                           : 'Select Video',
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.video_collection,
                                         size: 16.0,
                                       ),
@@ -494,10 +489,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             MediaQuery.sizeOf(context).width *
                                                 1.0,
                                         height: 44.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -521,9 +516,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: MediaQuery.sizeOf(context).width *
                                           1.0,
                                       child: TextFormField(
@@ -597,7 +592,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 16.0, 16.0, 16.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
@@ -694,7 +689,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       fillColor: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               16.0, 16.0, 16.0, 16.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -732,7 +727,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     text: FFLocalizations.of(context).getText(
                                       'pormt7vu' /* Choose Location */,
                                     ),
-                                    icon: FaIcon(
+                                    icon: const FaIcon(
                                       FontAwesomeIcons.locationArrow,
                                       size: 16.0,
                                     ),
@@ -740,10 +735,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       width: MediaQuery.sizeOf(context).width *
                                           1.0,
                                       height: 44.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 16.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -789,12 +784,11 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           child: SizedBox(
                                             width: 50.0,
                                             height: 50.0,
-                                            child: CircularProgressIndicator(
-                                              valueColor:
-                                                  AlwaysStoppedAnimation<Color>(
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                              ),
+                                            child: SpinKitRipple(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              size: 50.0,
                                             ),
                                           ),
                                         );
@@ -840,7 +834,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                 .alternate,
                                         borderWidth: 2.0,
                                         borderRadius: 8.0,
-                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         hidesUnderline: true,
                                         isOverButton: false,
@@ -866,7 +860,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      final _datePickedDate =
+                                      final datePickedDate =
                                           await showDatePicker(
                                         context: context,
                                         initialDate: getCurrentTimestamp,
@@ -912,9 +906,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         },
                                       );
 
-                                      TimeOfDay? _datePickedTime;
-                                      if (_datePickedDate != null) {
-                                        _datePickedTime = await showTimePicker(
+                                      TimeOfDay? datePickedTime;
+                                      if (datePickedDate != null) {
+                                        datePickedTime = await showTimePicker(
                                           context: context,
                                           initialTime: TimeOfDay.fromDateTime(
                                               getCurrentTimestamp),
@@ -960,15 +954,15 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         );
                                       }
 
-                                      if (_datePickedDate != null &&
-                                          _datePickedTime != null) {
+                                      if (datePickedDate != null &&
+                                          datePickedTime != null) {
                                         safeSetState(() {
                                           _model.datePicked = DateTime(
-                                            _datePickedDate.year,
-                                            _datePickedDate.month,
-                                            _datePickedDate.day,
-                                            _datePickedTime!.hour,
-                                            _datePickedTime.minute,
+                                            datePickedDate.year,
+                                            datePickedDate.month,
+                                            datePickedDate.day,
+                                            datePickedTime!.hour,
+                                            datePickedTime.minute,
                                           );
                                         });
                                       }
@@ -994,9 +988,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -1025,8 +1019,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     ),
                                   ),
                                 ]
-                                    .divide(SizedBox(height: 12.0))
-                                    .addToEnd(SizedBox(height: 32.0)),
+                                    .divide(const SizedBox(height: 12.0))
+                                    .addToEnd(const SizedBox(height: 32.0)),
                               ),
                             ),
                           ),
@@ -1035,7 +1029,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                             ? MediaQuery.viewInsetsOf(context).bottom > 0
                             : _isKeyboardVisible))
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 16.0, 24.0),
                             child: StreamBuilder<List<UsersRecord>>(
                               stream: queryUsersRecord(
@@ -1053,11 +1047,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     child: SizedBox(
                                       width: 50.0,
                                       height: 50.0,
-                                      child: CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                          FlutterFlowTheme.of(context).primary,
-                                        ),
+                                      child: SpinKitRipple(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 50.0,
                                       ),
                                     ),
                                   );
@@ -1075,19 +1068,15 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
 
                                 return FFButtonWidget(
                                   onPressed: () async {
-                                    if ((_model.textController1.text != null &&
-                                            _model.textController1.text !=
+                                    if ((_model.textController1.text !=
                                                 '') &&
                                         (_model.descriptionTextController
-                                                    .text !=
-                                                null &&
-                                            _model.descriptionTextController
                                                     .text !=
                                                 '') &&
                                         (_model.dropDownValue != null &&
                                             _model.dropDownValue != '') &&
                                         (_model.datePicked != null) &&
-                                        (_model.uploadedFileUrls1.length > 0)) {
+                                        (_model.uploadedFileUrls1.isNotEmpty)) {
                                       var notesRecordReference = NotesRecord
                                           .collection
                                           .doc(random_data.randomString(
@@ -1155,7 +1144,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                       triggerPushNotification(
                                         notificationTitle: 'New Task Available',
                                         notificationText:
-                                            'A new task was assigned to you by ${currentUserDisplayName}',
+                                            'A new task was assigned to you by $currentUserDisplayName',
                                         notificationSound: 'default',
                                         userRefs: [
                                           buttonUsersRecord!.reference
@@ -1172,14 +1161,14 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text('Missing Data'),
-                                            content: Text(
+                                            title: const Text('Missing Data'),
+                                            content: const Text(
                                                 'Make sure to fill the entire form'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('Ok'),
+                                                child: const Text('Ok'),
                                               ),
                                             ],
                                           );
@@ -1194,9 +1183,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                   ),
                                   options: FFButtonOptions(
                                     height: 44.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
@@ -1209,7 +1198,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),

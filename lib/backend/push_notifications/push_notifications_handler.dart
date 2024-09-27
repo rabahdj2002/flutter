@@ -1,22 +1,19 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'serialization_util.dart';
 import '../backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '../../flutter_flow/flutter_flow_util.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-import '../../index.dart';
-import '../../main.dart';
 
 final _handledMessageIds = <String?>{};
 
 class PushNotificationsHandler extends StatefulWidget {
-  const PushNotificationsHandler({Key? key, required this.child})
-      : super(key: key);
+  const PushNotificationsHandler({super.key, required this.child});
 
   final Widget child;
 
@@ -80,10 +77,9 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
           child: SizedBox(
             width: 50.0,
             height: 50.0,
-            child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(
-                FlutterFlowTheme.of(context).primary,
-              ),
+            child: SpinKitRipple(
+              color: FlutterFlowTheme.of(context).primary,
+              size: 50.0,
             ),
           ),
         )
@@ -106,7 +102,7 @@ class ParameterData {
       );
 
   static Future<ParameterData> Function(Map<String, dynamic>) none() =>
-      (data) async => ParameterData();
+      (data) async => const ParameterData();
 }
 
 final parametersBuilderMap =
@@ -157,7 +153,6 @@ final parametersBuilderMap =
       ),
   'AdminAllTasks': ParameterData.none(),
   'ActivationPending': ParameterData.none(),
-  'vfsd': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

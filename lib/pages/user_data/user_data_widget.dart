@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/task_component_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -6,16 +5,11 @@ import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'user_data_model.dart';
 export 'user_data_model.dart';
 
@@ -59,8 +53,8 @@ class _UserDataWidgetState extends State<UserDataWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 90.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 90.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -78,8 +72,8 @@ class _UserDataWidgetState extends State<UserDataWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -98,8 +92,8 @@ class _UserDataWidgetState extends State<UserDataWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 170.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 170.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -118,8 +112,8 @@ class _UserDataWidgetState extends State<UserDataWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 170.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 170.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -130,8 +124,8 @@ class _UserDataWidgetState extends State<UserDataWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(60.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(60.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -188,10 +182,9 @@ class _UserDataWidgetState extends State<UserDataWidget>
               child: SizedBox(
                 width: 50.0,
                 height: 50.0,
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(
-                    FlutterFlowTheme.of(context).primary,
-                  ),
+                child: SpinKitRipple(
+                  color: FlutterFlowTheme.of(context).primary,
+                  size: 50.0,
                 ),
               ),
             ),
@@ -221,11 +214,11 @@ class _UserDataWidgetState extends State<UserDataWidget>
                         ),
                   ).animateOnPageLoad(
                       animationsMap['textOnPageLoadAnimation2']!),
-                ].divide(SizedBox(height: 4.0)),
+                ].divide(const SizedBox(height: 4.0)),
               ),
               actions: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 8.0),
                   child: FlutterFlowIconButton(
                     borderColor: FlutterFlowTheme.of(context).alternate,
                     borderRadius: 12.0,
@@ -255,11 +248,11 @@ class _UserDataWidgetState extends State<UserDataWidget>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           16.0, 12.0, 16.0, 12.0),
                       child: GridView(
                         padding: EdgeInsets.zero,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 10.0,
                           mainAxisSpacing: 10.0,
@@ -277,7 +270,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(12.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -289,7 +282,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                     size: 32.0,
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: StreamBuilder<List<NotesRecord>>(
                                       stream: queryNotesRecord(
@@ -301,7 +294,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                                 )
                                                 .where(
                                                   'assignedTo',
-                                                  isEqualTo: widget!
+                                                  isEqualTo: widget
                                                       .userParam?.reference,
                                                 ),
                                       ),
@@ -312,13 +305,11 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                             child: SizedBox(
                                               width: 50.0,
                                               height: 50.0,
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                                ),
+                                              child: SpinKitRipple(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                size: 50.0,
                                               ),
                                             ),
                                           );
@@ -364,7 +355,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(12.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -376,7 +367,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                     size: 44.0,
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 12.0),
                                     child: StreamBuilder<List<NotesRecord>>(
                                       stream: queryNotesRecord(
@@ -388,7 +379,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                                 )
                                                 .where(
                                                   'assignedTo',
-                                                  isEqualTo: widget!
+                                                  isEqualTo: widget
                                                       .userParam?.reference,
                                                 ),
                                       ),
@@ -399,13 +390,11 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                             child: SizedBox(
                                               width: 50.0,
                                               height: 50.0,
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                                ),
+                                              child: SpinKitRipple(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                size: 50.0,
                                               ),
                                             ),
                                           );
@@ -453,7 +442,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 12.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 12.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'ab5iewmx' /* Filter Tasks */,
@@ -475,7 +464,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 8.0),
                             child: FlutterFlowChoiceChips(
                               options: [
@@ -501,7 +490,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                         .where(
                                           'assignedTo',
                                           isEqualTo:
-                                              widget!.userParam?.reference,
+                                              widget.userParam?.reference,
                                         )
                                         .orderBy('deadline'),
                                   );
@@ -519,7 +508,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                           .where(
                                             'assignedTo',
                                             isEqualTo:
-                                                widget!.userParam?.reference,
+                                                widget.userParam?.reference,
                                           )
                                           .orderBy('deadline'),
                                     );
@@ -538,7 +527,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                                 )
                                                 .where(
                                                   'assignedTo',
-                                                  isEqualTo: widget!
+                                                  isEqualTo: widget
                                                       .userParam?.reference,
                                                 )
                                                 .orderBy('deadline'),
@@ -559,7 +548,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                                   )
                                                   .where(
                                                     'assignedTo',
-                                                    isEqualTo: widget!
+                                                    isEqualTo: widget
                                                         .userParam?.reference,
                                                   )
                                                   .orderBy('deadline'),
@@ -577,7 +566,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                 safeSetState(() {});
                               },
                               selectedChipStyle: ChipStyle(
-                                backgroundColor: Color(0xFF6F61EF),
+                                backgroundColor: const Color(0xFF6F61EF),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -590,25 +579,25 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                 iconColor: Colors.white,
                                 iconSize: 18.0,
                                 elevation: 2.0,
-                                borderColor: Color(0x4D9489F5),
+                                borderColor: const Color(0x4D9489F5),
                                 borderWidth: 1.0,
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               unselectedChipStyle: ChipStyle(
-                                backgroundColor: Color(0xFFE5E7EB),
+                                backgroundColor: const Color(0xFFE5E7EB),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
-                                      color: Color(0xFF606A85),
+                                      color: const Color(0xFF606A85),
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                     ),
-                                iconColor: Color(0xFF606A85),
+                                iconColor: const Color(0xFF606A85),
                                 iconSize: 18.0,
                                 elevation: 0.0,
-                                borderColor: Color(0xFFF1F4F8),
+                                borderColor: const Color(0xFFF1F4F8),
                                 borderWidth: 1.0,
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
@@ -629,8 +618,8 @@ class _UserDataWidgetState extends State<UserDataWidget>
                             ),
                           ),
                         ]
-                            .addToStart(SizedBox(width: 16.0))
-                            .addToEnd(SizedBox(width: 16.0)),
+                            .addToStart(const SizedBox(width: 16.0))
+                            .addToEnd(const SizedBox(width: 16.0)),
                       ),
                     ),
                     Flexible(
@@ -652,7 +641,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                               }()
                                   ?.map((e) => e)
                                   .toList()
-                                  ?.toList() ??
+                                  .toList() ??
                               [];
 
                           return ListView.builder(
@@ -664,7 +653,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                             itemBuilder: (context, tasksIndex) {
                               final tasksItem = tasks[tasksIndex];
                               return Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -682,7 +671,7 @@ class _UserDataWidgetState extends State<UserDataWidget>
                                       }.withoutNulls,
                                       extra: <String, dynamic>{
                                         'note': tasksItem,
-                                        kTransitionInfoKey: TransitionInfo(
+                                        kTransitionInfoKey: const TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,

@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'empty_list_model.dart';
 export 'empty_list_model.dart';
 
@@ -41,7 +39,7 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
       mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
           child: Icon(
             Icons.notifications_none,
             color: FlutterFlowTheme.of(context).secondaryText,
@@ -49,7 +47,7 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
           ),
         ),
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
           child: Text(
             FFLocalizations.of(context).getText(
               'i44b1lgz' /* No Activity */,
@@ -61,9 +59,9 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
           ),
         ),
         Align(
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
                 '4vxq5lua' /* It seems that you don't have a... */,
