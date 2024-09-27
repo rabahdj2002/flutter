@@ -2,7 +2,9 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'create_task_widget.dart' show CreateTaskWidget;
-import 'package:flutter/material.dart';
+
+//import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide CarouselController;
 
 class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {
   ///  Local state fields for this page.
@@ -15,7 +17,7 @@ class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {
 
   final formKey = GlobalKey<FormState>();
   // State field(s) for Carousel widget.
-  CarouselController? carouselController;
+  CarouselSliderController? carouselController;
   int carouselCurrentIndex = 0;
 
   bool isDataUploading1 = false;
