@@ -12,11 +12,14 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:async';
 import '/flutter_flow/random_data_util.dart' as random_data;
-import 'package:carousel_slider/carousel_slider.dart';
+//import 'package:carousel_slider/carousel_slider.dart';
 
 
 //import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' hide CarouselController;
+
+import 'package:carousel_slider/carousel_slider.dart' as cs;
+final cs.CarouselSliderController _controller = cs.CarouselSliderController();
 
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
