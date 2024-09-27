@@ -12,10 +12,8 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:async';
 import '/flutter_flow/random_data_util.dart' as random_data;
-//import 'package:carousel_slider/carousel_slider.dart';
-import 'package:carousel_slider/carousel_controller.dart';
-
-import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart' hide CarouselController;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -231,7 +229,9 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                   ),
                                                 );
                                               },
-                                              carouselController: _model.carouselController ??= CarouselSliderController(),
+                                              carouselController:
+                                                  _model.carouselController ??=
+                                                      CarouselController(),
                                               options: CarouselOptions(
                                                 initialPage: max(0,
                                                     min(0, images.length - 1)),
@@ -358,8 +358,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                               }
                                             }
 
-                                            await _model.carouselController.nextPage(
-                                              duration: const Duration(milliseconds: 300),
+                                            await _model.carouselController
+                                                ?.nextPage(
+                                              duration:
+                                                  const Duration(milliseconds: 300),
                                               curve: Curves.ease,
                                             );
                                           },
