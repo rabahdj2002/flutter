@@ -4,6 +4,7 @@ import 'serialization_util.dart';
 import '../backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '../../flutter_flow/flutter_flow_util.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -76,10 +77,9 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
           child: SizedBox(
             width: 50.0,
             height: 50.0,
-            child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(
-                FlutterFlowTheme.of(context).primary,
-              ),
+            child: SpinKitRipple(
+              color: FlutterFlowTheme.of(context).primary,
+              size: 50.0,
             ),
           ),
         )
@@ -119,18 +119,6 @@ final parametersBuilderMap =
   'createAccount': ParameterData.none(),
   'loginUser': ParameterData.none(),
   'userList': ParameterData.none(),
-  'userData': (data) async => ParameterData(
-        allParams: {
-          'userParam': await getDocumentParameter<UsersRecord>(
-              data, 'userParam', UsersRecord.fromSnapshot),
-        },
-      ),
-  'addResolution': (data) async => ParameterData(
-        allParams: {
-          'task': await getDocumentParameter<NotesRecord>(
-              data, 'task', NotesRecord.fromSnapshot),
-        },
-      ),
   'PendingTasks': (data) async => ParameterData(
         allParams: {
           'tabIndex': getParameter<int>(data, 'tabIndex'),
@@ -153,6 +141,14 @@ final parametersBuilderMap =
       ),
   'AdminAllTasks': ParameterData.none(),
   'ActivationPending': ParameterData.none(),
+  'AimPage': ParameterData.none(),
+  'AimModify': ParameterData.none(),
+  'ResolutionCenter': (data) async => ParameterData(
+        allParams: {
+          'taskRef': await getDocumentParameter<NotesRecord>(
+              data, 'taskRef', NotesRecord.fromSnapshot),
+        },
+      ),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

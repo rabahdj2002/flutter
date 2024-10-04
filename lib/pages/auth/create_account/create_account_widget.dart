@@ -358,6 +358,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
                                       final selectedMedia = await selectMedia(
+                                        maxWidth: 1000.00,
+                                        maxHeight: 1000.00,
                                         mediaSource: MediaSource.photoGallery,
                                         multiImage: false,
                                       );
@@ -960,20 +962,23 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                         ],
                       ),
                     ),
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, 1.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'rfa3ksqg' /* Made By: Eng. Bandar Majeed */,
-                      ),
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
-                            letterSpacing: 0.0,
-                          ),
-                    ).animateOnPageLoad(
-                        animationsMap['textOnPageLoadAnimation3']!),
-                  ),
+                  if (!(isWeb
+                      ? MediaQuery.viewInsetsOf(context).bottom > 0
+                      : _isKeyboardVisible))
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'rfa3ksqg' /* Made By: Eng. Bandar Majeed */,
+                        ),
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Inter',
+                              letterSpacing: 0.0,
+                            ),
+                      ).animateOnPageLoad(
+                          animationsMap['textOnPageLoadAnimation3']!),
+                    ),
                 ],
               ),
             ),

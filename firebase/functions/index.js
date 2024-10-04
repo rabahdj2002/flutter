@@ -243,6 +243,38 @@ exports.onUserDeleted = functions.auth.user().onDelete(async (user) => {
         await doc.ref.delete();
       }
     });
+  await firestore
+    .collection("AppInfo")
+    .where("Name", "==", user.uid)
+    .get()
+    .then(async (querySnapshot) => {
+      for (var doc of querySnapshot.docs) {
+        console.log(`Deleting document ${doc.id} from collection AppInfo`);
+        await doc.ref.delete();
+      }
+    });
+  await firestore
+    .collection("chat_messages")
+    .where("user", "==", userRef)
+    .get()
+    .then(async (querySnapshot) => {
+      for (var doc of querySnapshot.docs) {
+        console.log(
+          `Deleting document ${doc.id} from collection chat_messages`,
+        );
+        await doc.ref.delete();
+      }
+    });
+  await firestore
+    .collection("chats")
+    .where("admin", "==", userRef)
+    .get()
+    .then(async (querySnapshot) => {
+      for (var doc of querySnapshot.docs) {
+        console.log(`Deleting document ${doc.id} from collection chats`);
+        await doc.ref.delete();
+      }
+    });
 });
 const OneSignal = require("@onesignal/node-onesignal");
 

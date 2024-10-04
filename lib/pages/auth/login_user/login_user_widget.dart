@@ -182,17 +182,6 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
         ],
       ),
     });
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {
-          _model.emailTextController?.text =
-              FFLocalizations.of(context).getText(
-            'cwavt2tz' /* admin@tif-maintenance.com */,
-          );
-          _model.passwordTextController?.text =
-              FFLocalizations.of(context).getText(
-            '70lxzpdx' /* ve@SNm7! */,
-          );
-        }));
   }
 
   @override
@@ -603,20 +592,23 @@ class _LoginUserWidgetState extends State<LoginUserWidget>
                         ],
                       ),
                     ),
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, 1.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'pfzf16hs' /* Made By: Eng. Bandar Majeed */,
-                      ),
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
-                            letterSpacing: 0.0,
-                          ),
-                    ).animateOnPageLoad(
-                        animationsMap['textOnPageLoadAnimation3']!),
-                  ),
+                  if (!(isWeb
+                      ? MediaQuery.viewInsetsOf(context).bottom > 0
+                      : _isKeyboardVisible))
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'pfzf16hs' /* Made By: Eng. Bandar Majeed */,
+                        ),
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Inter',
+                              letterSpacing: 0.0,
+                            ),
+                      ).animateOnPageLoad(
+                          animationsMap['textOnPageLoadAnimation3']!),
+                    ),
                 ],
               ),
             ),

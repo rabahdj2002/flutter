@@ -76,6 +76,16 @@ class NotesRecord extends FirestoreRecord {
   String get video => _video ?? '';
   bool hasVideo() => _video != null;
 
+  // "proposed" field.
+  bool? _proposed;
+  bool get proposed => _proposed ?? false;
+  bool hasProposed() => _proposed != null;
+
+  // "chat" field.
+  DocumentReference? _chat;
+  DocumentReference? get chat => _chat;
+  bool hasChat() => _chat != null;
+
   void _initializeFields() {
     _createdBy = snapshotData['createdBy'] as DocumentReference?;
     _assignedTo = snapshotData['assignedTo'] as DocumentReference?;
@@ -89,6 +99,8 @@ class NotesRecord extends FirestoreRecord {
     _overdueNotified = snapshotData['OverdueNotified'] as bool?;
     _ref = snapshotData['ref'] as String?;
     _video = snapshotData['video'] as String?;
+    _proposed = snapshotData['proposed'] as bool?;
+    _chat = snapshotData['chat'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -136,6 +148,8 @@ Map<String, dynamic> createNotesRecordData({
   bool? overdueNotified,
   String? ref,
   String? video,
+  bool? proposed,
+  DocumentReference? chat,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -150,6 +164,8 @@ Map<String, dynamic> createNotesRecordData({
       'OverdueNotified': overdueNotified,
       'ref': ref,
       'video': video,
+      'proposed': proposed,
+      'chat': chat,
     }.withoutNulls,
   );
 
@@ -173,7 +189,9 @@ class NotesRecordDocumentEquality implements Equality<NotesRecord> {
         e1?.title == e2?.title &&
         e1?.overdueNotified == e2?.overdueNotified &&
         e1?.ref == e2?.ref &&
-        e1?.video == e2?.video;
+        e1?.video == e2?.video &&
+        e1?.proposed == e2?.proposed &&
+        e1?.chat == e2?.chat;
   }
 
   @override
@@ -189,7 +207,9 @@ class NotesRecordDocumentEquality implements Equality<NotesRecord> {
         e?.title,
         e?.overdueNotified,
         e?.ref,
-        e?.video
+        e?.video,
+        e?.proposed,
+        e?.chat
       ]);
 
   @override

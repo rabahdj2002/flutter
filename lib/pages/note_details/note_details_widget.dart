@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -8,6 +7,7 @@ import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'note_details_model.dart';
 export 'note_details_model.dart';
 
@@ -85,52 +85,40 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        floatingActionButton: Visibility(
-          visible: widget.note!.completed ||
-              (widget.note?.assignedTo?.id == currentUserReference?.id),
-          child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
-            child: FloatingActionButton.extended(
-              onPressed: () async {
-                context.pushNamed(
-                  'addResolution',
-                  queryParameters: {
-                    'task': serializeParam(
-                      widget.note,
-                      ParamType.Document,
-                    ),
-                  }.withoutNulls,
-                  extra: <String, dynamic>{
-                    'task': widget.note,
-                    kTransitionInfoKey: const TransitionInfo(
-                      hasTransition: true,
-                      transitionType: PageTransitionType.bottomToTop,
-                    ),
-                  },
-                );
-              },
-              backgroundColor: FlutterFlowTheme.of(context).primaryText,
-              elevation: 12.0,
-              label: Text(
-                () {
-                  if (!widget.note!.completed &&
-                      (widget.note?.assignedTo?.id ==
-                          currentUserReference?.id)) {
-                    return 'Resolve Issue';
-                  } else if (widget.note?.completed == true) {
-                    return 'View Resolution';
-                  } else {
-                    return 'No Resolution Found';
-                  }
-                }(),
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Inter',
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      fontSize: 15.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+        floatingActionButton: Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+          child: FloatingActionButton.extended(
+            onPressed: () async {
+              context.pushNamed(
+                'ResolutionCenter',
+                queryParameters: {
+                  'taskRef': serializeParam(
+                    widget.note,
+                    ParamType.Document,
+                  ),
+                }.withoutNulls,
+                extra: <String, dynamic>{
+                  'taskRef': widget.note,
+                  kTransitionInfoKey: const TransitionInfo(
+                    hasTransition: true,
+                    transitionType: PageTransitionType.bottomToTop,
+                  ),
+                },
+              );
+            },
+            backgroundColor: FlutterFlowTheme.of(context).primaryText,
+            elevation: 12.0,
+            label: Text(
+              FFLocalizations.of(context).getText(
+                '7sl5lvaz' /* Resolution Center */,
               ),
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Inter',
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    fontSize: 15.0,
+                    letterSpacing: 0.0,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
           ),
         ),
@@ -230,13 +218,11 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                                             child: SizedBox(
                                               width: 50.0,
                                               height: 50.0,
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                                ),
+                                              child: SpinKitRipple(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                size: 50.0,
                                               ),
                                             ),
                                           );

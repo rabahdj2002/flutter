@@ -2,6 +2,7 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'create_task_widget.dart' show CreateTaskWidget;
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {
@@ -39,6 +40,10 @@ class CreateTaskModel extends FlutterFlowModel<CreateTaskWidget> {
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
   DateTime? datePicked;
+  // Stores action output result for [Firestore Query - Query a collection] action in Button widget.
+  UsersRecord? admin;
+  // Stores action output result for [Backend Call - Create Document] action in Button widget.
+  ChatsRecord? newChat;
   // Stores action output result for [Backend Call - Create Document] action in Button widget.
   NotesRecord? newNote;
 

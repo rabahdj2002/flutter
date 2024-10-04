@@ -5,20 +5,6 @@
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "completed",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "deadline",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "notes",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
           "fieldPath": "assignedTo",
           "order": "ASCENDING"
         },
@@ -75,6 +61,20 @@
         {
           "fieldPath": "deadline",
           "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "chat_messages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "chat",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "timestamp",
+          "order": "DESCENDING"
         }
       ]
     },

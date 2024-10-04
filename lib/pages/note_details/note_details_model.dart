@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import 'note_details_widget.dart' show NoteDetailsWidget;
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class NoteDetailsModel extends FlutterFlowModel<NoteDetailsWidget> {

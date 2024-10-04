@@ -19,3 +19,8 @@ Future accountStatus(BuildContext context) async {
     );
   }
 }
+
+Future lang(BuildContext context) async {
+  FFAppState().lang = FFLocalizations.of(context).languageCode;
+  FFAppState().update(() {});
+}

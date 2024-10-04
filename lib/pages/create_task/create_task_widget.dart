@@ -13,11 +13,13 @@ import '/flutter_flow/upload_data.dart';
 import 'dart:async';
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'create_task_model.dart';
@@ -278,6 +280,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           onTap: () async {
                                             final selectedMedia =
                                                 await selectMedia(
+                                              maxWidth: 50000.00,
+                                              maxHeight: 5000.00,
                                               mediaSource:
                                                   MediaSource.photoGallery,
                                               multiImage: true,
@@ -783,12 +787,11 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           child: SizedBox(
                                             width: 50.0,
                                             height: 50.0,
-                                            child: CircularProgressIndicator(
-                                              valueColor:
-                                                  AlwaysStoppedAnimation<Color>(
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                              ),
+                                            child: SpinKitRipple(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              size: 50.0,
                                             ),
                                           ),
                                         );
@@ -1047,11 +1050,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                     child: SizedBox(
                                       width: 50.0,
                                       height: 50.0,
-                                      child: CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                          FlutterFlowTheme.of(context).primary,
-                                        ),
+                                      child: SpinKitRipple(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 50.0,
                                       ),
                                     ),
                                   );
@@ -1078,6 +1080,40 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             _model.dropDownValue != '') &&
                                         (_model.datePicked != null) &&
                                         (_model.uploadedFileUrls1.isNotEmpty)) {
+                                      _model.admin = await queryUsersRecordOnce(
+                                        queryBuilder: (usersRecord) =>
+                                            usersRecord.where(
+                                          'is_admin',
+                                          isEqualTo: true,
+                                        ),
+                                        singleRecord: true,
+                                      ).then((s) => s.firstOrNull);
+
+                                      var chatsRecordReference = ChatsRecord
+                                          .collection
+                                          .doc(random_data.randomString(
+                                        20,
+                                        20,
+                                        true,
+                                        true,
+                                        true,
+                                      ));
+                                      await chatsRecordReference
+                                          .set(createChatsRecordData(
+                                        creator: currentUserReference,
+                                        assigned: buttonUsersRecord?.reference,
+                                        admin: _model.admin?.reference,
+                                      ));
+                                      _model.newChat =
+                                          ChatsRecord.getDocumentFromData(
+                                              createChatsRecordData(
+                                                creator: currentUserReference,
+                                                assigned: buttonUsersRecord
+                                                    ?.reference,
+                                                admin: _model.admin?.reference,
+                                              ),
+                                              chatsRecordReference);
+
                                       var notesRecordReference = NotesRecord
                                           .collection
                                           .doc(random_data.randomString(
@@ -1107,6 +1143,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           ),
                                           overdueNotified: false,
                                           video: _model.uploadedFileUrl2,
+                                          chat: _model.newChat?.reference,
                                         ),
                                         ...mapToFirestore(
                                           {
@@ -1135,6 +1172,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           ),
                                           overdueNotified: false,
                                           video: _model.uploadedFileUrl2,
+                                          chat: _model.newChat?.reference,
                                         ),
                                         ...mapToFirestore(
                                           {

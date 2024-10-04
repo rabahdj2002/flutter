@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
@@ -131,33 +132,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const UserListWidget(),
         ),
         FFRoute(
-          name: 'userData',
-          path: '/userData',
-          asyncParams: {
-            'userParam': getDoc(['users'], UsersRecord.fromSnapshot),
-          },
-          builder: (context, params) => UserDataWidget(
-            userParam: params.getParam(
-              'userParam',
-              ParamType.Document,
-            ),
-          ),
-        ),
-        FFRoute(
-          name: 'addResolution',
-          path: '/addResolution',
-          requireAuth: true,
-          asyncParams: {
-            'task': getDoc(['notes'], NotesRecord.fromSnapshot),
-          },
-          builder: (context, params) => AddResolutionWidget(
-            task: params.getParam(
-              'task',
-              ParamType.Document,
-            ),
-          ),
-        ),
-        FFRoute(
           name: 'PendingTasks',
           path: '/pendingTasks',
           builder: (context, params) => PendingTasksWidget(
@@ -208,6 +182,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/activationPending',
           requireAuth: true,
           builder: (context, params) => const ActivationPendingWidget(),
+        ),
+        FFRoute(
+          name: 'AimPage',
+          path: '/aimPage',
+          builder: (context, params) => const AimPageWidget(),
+        ),
+        FFRoute(
+          name: 'AimModify',
+          path: '/aimModify',
+          builder: (context, params) => const AimModifyWidget(),
+        ),
+        FFRoute(
+          name: 'ResolutionCenter',
+          path: '/resolutionCenter',
+          asyncParams: {
+            'taskRef': getDoc(['notes'], NotesRecord.fromSnapshot),
+          },
+          builder: (context, params) => ResolutionCenterWidget(
+            taskRef: params.getParam(
+              'taskRef',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -397,10 +394,9 @@ class FFRoute {
                   child: SizedBox(
                     width: 50.0,
                     height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
+                    child: SpinKitRipple(
+                      color: FlutterFlowTheme.of(context).primary,
+                      size: 50.0,
                     ),
                   ),
                 )

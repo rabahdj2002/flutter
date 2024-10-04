@@ -270,15 +270,11 @@ class _AdminAllTasksWidgetState extends State<AdminAllTasksWidget>
                                                       child: SizedBox(
                                                         width: 50.0,
                                                         height: 50.0,
-                                                        child:
-                                                            CircularProgressIndicator(
-                                                          valueColor:
-                                                              AlwaysStoppedAnimation<
-                                                                  Color>(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                          ),
+                                                        child: SpinKitRipple(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          size: 50.0,
                                                         ),
                                                       ),
                                                     );
@@ -365,15 +361,11 @@ class _AdminAllTasksWidgetState extends State<AdminAllTasksWidget>
                                                       child: SizedBox(
                                                         width: 50.0,
                                                         height: 50.0,
-                                                        child:
-                                                            CircularProgressIndicator(
-                                                          valueColor:
-                                                              AlwaysStoppedAnimation<
-                                                                  Color>(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                          ),
+                                                        child: SpinKitRipple(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          size: 50.0,
                                                         ),
                                                       ),
                                                     );
@@ -460,15 +452,11 @@ class _AdminAllTasksWidgetState extends State<AdminAllTasksWidget>
                                                       child: SizedBox(
                                                         width: 50.0,
                                                         height: 50.0,
-                                                        child:
-                                                            CircularProgressIndicator(
-                                                          valueColor:
-                                                              AlwaysStoppedAnimation<
-                                                                  Color>(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                          ),
+                                                        child: SpinKitRipple(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          size: 50.0,
                                                         ),
                                                       ),
                                                     );
@@ -549,15 +537,11 @@ class _AdminAllTasksWidgetState extends State<AdminAllTasksWidget>
                                                       child: SizedBox(
                                                         width: 50.0,
                                                         height: 50.0,
-                                                        child:
-                                                            CircularProgressIndicator(
-                                                          valueColor:
-                                                              AlwaysStoppedAnimation<
-                                                                  Color>(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                          ),
+                                                        child: SpinKitRipple(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          size: 50.0,
                                                         ),
                                                       ),
                                                     );

@@ -547,7 +547,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                         .accent1,
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            12.0),
+                                                            10.0),
                                                     border: Border.all(
                                                       color:
                                                           FlutterFlowTheme.of(
@@ -562,7 +562,7 @@ class _UserListWidgetState extends State<UserListWidget>
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              8.0),
+                                                              10.0),
                                                       child: Image.network(
                                                         usersListItem.photoUrl,
                                                         width: 120.0,

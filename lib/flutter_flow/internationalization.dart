@@ -121,7 +121,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'q2t2mk2s': {
       'en': 'Dashboard',
-      'ar': 'لوحة القيادة',
+      'ar': 'لوحة التحكم',
+    },
+    '1q6n5cl0': {
+      'en': 'Our App\'s Aim',
+      'ar': 'هدف تطبيقنا',
     },
     'k8fstk2e': {
       'en': 'Analytics',
@@ -131,12 +135,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Manage Users',
       'ar': 'إدارة المستخدمين',
     },
-    's4usucym': {
+    '7qnl5est': {
+      'en': 'Modify Password',
+      'ar': 'تعديل كلمة المرور',
+    },
+    '7ownio93': {
       'en': 'Log Out',
       'ar': 'تسجيل الخروج',
     },
     'o7tpb2u1': {
-      'en': 'v0.0.0 Beta',
+      'en': 'v1.0.0 Stable',
       'ar': 'الإصدار التجريبي v0.0.0',
     },
     'oi229fpr': {
@@ -157,6 +165,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yq43sytv': {
       'en': 'Description :',
       'ar': 'وصف :',
+    },
+    '7sl5lvaz': {
+      'en': 'Resolution Center',
+      'ar': 'مركز الحلول',
     },
   },
   // createTask
@@ -298,17 +310,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Email Address',
       'ar': 'عنوان البريد الإلكتروني',
     },
-    'cwavt2tz': {
-      'en': 'admin@tif-maintenance.com',
-      'ar': 'admin@tif-maintenance.com',
-    },
     '4o1oycwy': {
       'en': 'Password',
       'ar': 'كلمة المرور',
-    },
-    '70lxzpdx': {
-      'en': 've@SNm7!',
-      'ar': 've@SNm7!',
     },
     'x3mka6z9': {
       'en': 'Sign in',
@@ -362,72 +366,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'إدارة المستخدمين',
     },
     '86yr0aef': {
-      'en': 'Home',
-      'ar': 'بيت',
-    },
-  },
-  // userData
-  {
-    'kvchff1a': {
-      'en': 'PENDING',
-      'ar': 'قيد الانتظار',
-    },
-    'xkhli1cm': {
-      'en': 'Completed',
-      'ar': 'مكتمل',
-    },
-    'ab5iewmx': {
-      'en': 'Filter Tasks',
-      'ar': 'تصفية المهام',
-    },
-    'j7eqcqe1': {
-      'en': 'All',
-      'ar': 'الجميع',
-    },
-    'sz1ckuuu': {
-      'en': 'Completed',
-      'ar': 'مكتمل',
-    },
-    'vsgd488o': {
-      'en': 'Pending',
-      'ar': 'قيد الانتظار',
-    },
-    '0bqa0u1h': {
-      'en': 'Overdue',
-      'ar': 'متأخر',
-    },
-    'hmrakl44': {
-      'en': 'All',
-      'ar': 'الجميع',
-    },
-    'rwe4kxvk': {
-      'en': 'All',
-      'ar': 'الجميع',
-    },
-    'j76q0f0a': {
-      'en': 'Analytics',
-      'ar': 'التحليلات',
-    },
-    'fewz2nrn': {
-      'en': 'Home',
-      'ar': 'بيت',
-    },
-  },
-  // addResolution
-  {
-    'x98p3pg5': {
-      'en': 'Resolution',
-      'ar': 'دقة',
-    },
-    'mnu5s16l': {
-      'en': 'Description',
-      'ar': 'وصف',
-    },
-    'rigx9xkp': {
-      'en': 'Add Resolution',
-      'ar': 'إضافة الدقة',
-    },
-    'vo862tpl': {
       'en': 'Home',
       'ar': 'بيت',
     },
@@ -859,13 +797,66 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'atbgkxxl': {
       'en': 'Sign Out',
-      'ar': '',
+      'ar': 'تسجيل الخروج',
     },
     '1wv98019': {
       'en': 'Made By: Eng. Bandar Majeed',
       'ar': 'إعداد: المهندس بندر مجيد',
     },
     '0r7qdgpb': {
+      'en': 'Home',
+      'ar': 'بيت',
+    },
+  },
+  // AimPage
+  {
+    'x4mbhgzt': {
+      'en': 'Our Aim',
+      'ar': 'هدفنا',
+    },
+    'n0z090j6': {
+      'en': 'Modify Details',
+      'ar': 'تعديل التفاصيل',
+    },
+  },
+  // AimModify
+  {
+    '9z36cbs4': {
+      'en': 'App Details',
+      'ar': 'تفاصيل التطبيق',
+    },
+    'moz7zg5g': {
+      'en': 'App Name',
+      'ar': 'اسم التطبيق',
+    },
+    'mw1jzait': {
+      'en': 'Description',
+      'ar': 'وصف',
+    },
+    '789vtrmg': {
+      'en': 'Why Choose Us',
+      'ar': 'لماذا تختارنا؟',
+    },
+    'yr27wjjd': {
+      'en': 'Why Choose Us',
+      'ar': 'لماذا تختارنا؟',
+    },
+    '86rcqi1l': {
+      'en': 'Add New Reason',
+      'ar': 'أضف سببًا جديدًا',
+    },
+    'h29h4iu9': {
+      'en': 'Save Changes',
+      'ar': 'حفظ التغييرات',
+    },
+  },
+  // ResolutionCenter
+  {
+    'qou463nr': {
+      'en': 'Discution Center',
+      'ar': '',
+    },
+    'h74blmff': {
       'en': 'Home',
       'ar': 'بيت',
     },
@@ -879,6 +870,32 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '4vxq5lua': {
       'en': 'It seems that you don\'t have any recent tasks.',
       'ar': 'يبدو أنه ليس لديك أي مهام حديثة.',
+    },
+  },
+  // EmailChangePopup
+  {
+    'ph69ewjj': {
+      'en': 'New Email Address',
+      'ar': 'عنوان بريد إلكتروني جديد',
+    },
+    'ith0i56s': {
+      'en': 'Change Email',
+      'ar': 'تغيير البريد الإلكتروني',
+    },
+  },
+  // ChatComp
+  {
+    'omjm5lmy': {
+      'en': 'Start typing here...',
+      'ar': 'ابدأ الكتابة هنا...',
+    },
+    'hibut0cn': {
+      'en': 'You must enter a message...',
+      'ar': 'يجب عليك إدخال الرسالة...',
+    },
+    'wndlujve': {
+      'en': 'Please choose an option from the dropdown',
+      'ar': 'الرجاء اختيار خيار من القائمة المنسدلة',
     },
   },
   // Miscellaneous
@@ -898,7 +915,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '206fnn4o': {
       'en':
           'We need your location to provide personalized services. Your data will remain secure.',
-      'ar': '',
+      'ar': 'نحن بحاجة إلى موقعك لتقديم خدمات مخصصة لك. ستظل بياناتك آمنة.',
     },
     '6rstqz72': {
       'en': '',

@@ -8,9 +8,6 @@ export '/pages/auth/create_account/create_account_widget.dart'
     show CreateAccountWidget;
 export '/pages/auth/login_user/login_user_widget.dart' show LoginUserWidget;
 export '/pages/user_list/user_list_widget.dart' show UserListWidget;
-export '/pages/user_data/user_data_widget.dart' show UserDataWidget;
-export '/pages/add_resolution/add_resolution_widget.dart'
-    show AddResolutionWidget;
 export '/pages/dashboard/pending_tasks/pending_tasks_widget.dart'
     show PendingTasksWidget;
 export '/pages/dashboard/overdue_tasks/overdue_tasks_widget.dart'
@@ -22,3 +19,7 @@ export '/pages/admin_all_tasks/admin_all_tasks_widget.dart'
     show AdminAllTasksWidget;
 export '/pages/activation_pending/activation_pending_widget.dart'
     show ActivationPendingWidget;
+export '/pages/aim_page/aim_page_widget.dart' show AimPageWidget;
+export '/pages/aim_modify/aim_modify_widget.dart' show AimModifyWidget;
+export '/pages/resolution_center/resolution_center_widget.dart'
+    show ResolutionCenterWidget;

@@ -36,6 +36,9 @@ class FFAppState extends ChangeNotifier {
     await _safeInitAsync(() async {
       _UserPass = await secureStorage.getString('ff_UserPass') ?? _UserPass;
     });
+    await _safeInitAsync(() async {
+      _lang = await secureStorage.getString('ff_lang') ?? _lang;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -106,6 +109,17 @@ class FFAppState extends ChangeNotifier {
   bool get Update => _Update;
   set Update(bool value) {
     _Update = value;
+  }
+
+  String _lang = 'en';
+  String get lang => _lang;
+  set lang(String value) {
+    _lang = value;
+    secureStorage.setString('ff_lang', value);
+  }
+
+  void deleteLang() {
+    secureStorage.delete(key: 'ff_lang');
   }
 }
 
