@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -318,19 +317,19 @@ class _NoteDetailsWidgetState extends State<NoteDetailsWidget>
                             thickness: 1.0,
                             color: FlutterFlowTheme.of(context).alternate,
                           ),
-                          if (widget.note?.video != null &&
-                              widget.note?.video != '')
-                            FlutterFlowVideoPlayer(
-                              path: widget.note!.video,
-                              videoType: VideoType.network,
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: 230.0,
-                              autoPlay: false,
-                              looping: true,
-                              showControls: true,
-                              allowFullScreen: true,
-                              allowPlaybackSpeedMenu: false,
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 15.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                widget.note!.camPic,
+                                width: MediaQuery.sizeOf(context).width * 1.0,
+                                height: 230.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
+                          ),
                           if (widget.note!.images.isNotEmpty)
                             Builder(
                               builder: (context) {

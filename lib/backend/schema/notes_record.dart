@@ -86,6 +86,11 @@ class NotesRecord extends FirestoreRecord {
   DocumentReference? get chat => _chat;
   bool hasChat() => _chat != null;
 
+  // "camPic" field.
+  String? _camPic;
+  String get camPic => _camPic ?? '';
+  bool hasCamPic() => _camPic != null;
+
   void _initializeFields() {
     _createdBy = snapshotData['createdBy'] as DocumentReference?;
     _assignedTo = snapshotData['assignedTo'] as DocumentReference?;
@@ -101,6 +106,7 @@ class NotesRecord extends FirestoreRecord {
     _video = snapshotData['video'] as String?;
     _proposed = snapshotData['proposed'] as bool?;
     _chat = snapshotData['chat'] as DocumentReference?;
+    _camPic = snapshotData['camPic'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -150,6 +156,7 @@ Map<String, dynamic> createNotesRecordData({
   String? video,
   bool? proposed,
   DocumentReference? chat,
+  String? camPic,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -166,6 +173,7 @@ Map<String, dynamic> createNotesRecordData({
       'video': video,
       'proposed': proposed,
       'chat': chat,
+      'camPic': camPic,
     }.withoutNulls,
   );
 
@@ -191,7 +199,8 @@ class NotesRecordDocumentEquality implements Equality<NotesRecord> {
         e1?.ref == e2?.ref &&
         e1?.video == e2?.video &&
         e1?.proposed == e2?.proposed &&
-        e1?.chat == e2?.chat;
+        e1?.chat == e2?.chat &&
+        e1?.camPic == e2?.camPic;
   }
 
   @override
@@ -209,7 +218,8 @@ class NotesRecordDocumentEquality implements Equality<NotesRecord> {
         e?.ref,
         e?.video,
         e?.proposed,
-        e?.chat
+        e?.chat,
+        e?.camPic
       ]);
 
   @override

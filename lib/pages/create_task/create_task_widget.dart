@@ -280,8 +280,6 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                           onTap: () async {
                                             final selectedMedia =
                                                 await selectMedia(
-                                              maxWidth: 50000.00,
-                                              maxHeight: 5000.00,
                                               mediaSource:
                                                   MediaSource.photoGallery,
                                               multiImage: true,
@@ -298,11 +296,6 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
 
                                               var downloadUrls = <String>[];
                                               try {
-                                                showUploadMessage(
-                                                  context,
-                                                  'Uploading file...',
-                                                  showLoading: true,
-                                                );
                                                 selectedUploadedFiles =
                                                     selectedMedia
                                                         .map((m) =>
@@ -336,8 +329,6 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                         .map((u) => u!)
                                                         .toList();
                                               } finally {
-                                                ScaffoldMessenger.of(context)
-                                                    .hideCurrentSnackBar();
                                                 _model.isDataUploading1 = false;
                                               }
                                               if (selectedUploadedFiles
@@ -351,12 +342,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                                   _model.uploadedFileUrls1 =
                                                       downloadUrls;
                                                 });
-                                                showUploadMessage(
-                                                    context, 'Success!');
                                               } else {
                                                 safeSetState(() {});
-                                                showUploadMessage(context,
-                                                    'Failed to upload data');
                                                 return;
                                               }
                                             }
@@ -409,11 +396,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         20.0, 0.0, 20.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        final selectedMedia =
-                                            await selectMediaWithSourceBottomSheet(
-                                          context: context,
-                                          allowPhoto: false,
-                                          allowVideo: true,
+                                        final selectedMedia = await selectMedia(
+                                          maxWidth: 5000.00,
+                                          maxHeight: 5000.00,
+                                          multiImage: false,
                                         );
                                         if (selectedMedia != null &&
                                             selectedMedia.every((m) =>
@@ -481,10 +467,10 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                         }
                                       },
                                       text: _model.uploadedFileUrl2 != ''
-                                          ? 'Video Selected'
-                                          : 'Select Video',
+                                          ? 'Photo Taken'
+                                          : 'Take Photo',
                                       icon: const Icon(
-                                        Icons.video_collection,
+                                        Icons.camera_alt,
                                         size: 16.0,
                                       ),
                                       options: FFButtonOptions(
@@ -1142,8 +1128,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             true,
                                           ),
                                           overdueNotified: false,
-                                          video: _model.uploadedFileUrl2,
                                           chat: _model.newChat?.reference,
+                                          camPic: _model.uploadedFileUrl2,
                                         ),
                                         ...mapToFirestore(
                                           {
@@ -1171,8 +1157,8 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget>
                                             true,
                                           ),
                                           overdueNotified: false,
-                                          video: _model.uploadedFileUrl2,
                                           chat: _model.newChat?.reference,
+                                          camPic: _model.uploadedFileUrl2,
                                         ),
                                         ...mapToFirestore(
                                           {

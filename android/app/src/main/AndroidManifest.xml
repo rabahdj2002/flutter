@@ -5,15 +5,13 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
 
     <application
-        android:label="TIF Maintenance"
+        android:label="TEST Maintenance"
         tools:replace="android:label"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
@@ -53,7 +51,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="tifmaintenance" android:host="tifmaintenance.com" />
+                <data android:scheme="testmaintenance" android:host="testmaintenance.com" />
             </intent-filter>
 
         </activity>

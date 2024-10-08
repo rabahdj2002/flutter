@@ -145,7 +145,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'o7tpb2u1': {
       'en': 'v1.0.0 Stable',
-      'ar': 'الإصدار التجريبي v0.0.0',
+      'ar': 'الإصدار 1.0.0 مستقر',
     },
     'oi229fpr': {
       'en': 'Made By: Eng. Bandar Majeed',
@@ -458,7 +458,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'zrp4mmvb': {
       'en': 'Dashboard',
-      'ar': 'لوحة القيادة',
+      'ar': 'لوحة التحكم',
     },
     'loojjtrj': {
       'en': 'Home',
@@ -553,7 +553,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ma583td6': {
       'en': 'Dashboard',
-      'ar': 'لوحة القيادة',
+      'ar': 'لوحة التحكم',
     },
     'v0p4dakr': {
       'en': 'Home',
@@ -648,7 +648,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'o34sb5n1': {
       'en': 'Dashboard',
-      'ar': 'لوحة القيادة',
+      'ar': 'لوحة التحكم',
     },
     'sayvpzwl': {
       'en': 'Home',
@@ -743,7 +743,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'xostacni': {
       'en': 'Dashboard',
-      'ar': 'لوحة القيادة',
+      'ar': 'لوحة التحكم',
     },
     '9wrjs1qa': {
       'en': 'Home',
@@ -854,7 +854,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'qou463nr': {
       'en': 'Discution Center',
-      'ar': '',
+      'ar': 'مركز المناقشة',
     },
     'h74blmff': {
       'en': 'Home',

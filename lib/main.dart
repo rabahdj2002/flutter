@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
 
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = tIFMaintenanceFirebaseUserStream()
+    userStream = tESTMaintenanceFirebaseUserStream()
       ..listen((user) {
         _appStateNotifier.update(user);
       });
@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'TIF Maintenance',
+      title: 'TEST Maintenance',
       localizationsDelegates: const [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,

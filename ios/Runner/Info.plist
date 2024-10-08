@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>TIF Maintenance</string>
+	<string>TEST Maintenance</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>TIF Maintenance</string>
+	<string>TEST Maintenance</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleLocalizations</key>
@@ -42,10 +42,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>tifmaintenance.com</string>
+        <string>testmaintenance.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>tifmaintenance</string>
+        <string>testmaintenance</string>
         </array>
         </dict>
     </array>
@@ -62,8 +62,6 @@
     <string>We need your location to provide personalized services. Your data will remain secure.</string>
 	<key>NSCameraUsageDescription</key>
     <string>We need access to your camera to allow you to take photos and videos directly within the app. This is used to attach images or documents to your notes and tasks.</string>
-	<key>NSMicrophoneUsageDescription</key>
-    <string>In order to record audio for video, this app requires permission to access the microphone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
     <string>We need permission to access your photo library so you can select and upload existing photos and videos from your device. This helps you attach relevant media to your notes and tasks.</string>
 
